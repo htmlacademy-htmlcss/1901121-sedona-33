@@ -2,14 +2,14 @@
 {% block title %}Седона: Каталог{% endblock %}
 
 {% block href_main %}href="index.html"{% endblock %}
-{% block href_catalog %}href=""{% endblock %}
+{% block href_catalog %}{% endblock %}
 
 {%block main%}
 
 <main class="main-inner">
   <header class="inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
-    <ul class="breadcrumbs">
+    <ol class="breadcrumbs">
       <li class="breadcrumbs-item">
         <a href="index.html" class="breadcrumbs-link">
           <span class="visually-hidden">Главная.</span>
@@ -18,7 +18,7 @@
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link">Гостиницы</a>
       </li>
-    </ul>
+    </ol>
   </header>
 
   <section class="catalog-housing">
@@ -80,7 +80,7 @@
       </fieldset>
 
     <button class="button" type="submit">Применить</button>
-    <input class="button-reset" type="reset" value="Сбросить">
+    <button class="button-reset" type="reset">Сбросить</button>
     </form>
 
     <h2 class="section-title">Найдено гостиниц: 38</h2>
@@ -103,7 +103,7 @@
 
     <ul class="housing-list">
       <li class="housing-card">
-        <img class="housing-card-image" src="" alt="">
+        <img class="housing-card-image" src="#" alt="">
         <h3 class="housing-card-title">Amara Resort & Spa</h3>
         <span class="housing-card-type">Гостиница</span>
         <span class="housing-card-price">От 4000 ₽</span>
@@ -115,7 +115,7 @@
         <p class="housing-rating">Рейтинг: 8,5</p>
       </li>
       <li class="housing-card">
-        <img class="housing-card-image" src="" alt="">
+        <img class="housing-card-image" src="#" alt="Фото объекта">
         <h3 class="housing-card-title">Desert Quail Inn</h3>
         <span class="housing-card-type">Гостиница</span>
         <span class="housing-card-price">От 3000 ₽</span>
@@ -127,7 +127,7 @@
         <p class="housing-rating">Рейтинг: 8,9</p>
       </li>
       <li class="housing-card">
-        <img class="housing-card-image" src="" alt="">
+        <img class="housing-card-image" src="#" alt="Фото объекта">
         <h3 class="housing-card-title">Villas at Poco Diablo</h3>
         <span class="housing-card-type">Гостиница</span>
         <span class="housing-card-price">От 2000 ₽</span>
@@ -139,7 +139,7 @@
         <p class="housing-rating">Рейтинг: 9,2</p>
       </li>
       <li class="housing-card">
-        <img class="housing-card-image" src="" alt="">
+        <img class="housing-card-image" src="#" alt="Фото объекта">
         <h3 class="housing-card-title">GreenTree Inn</h3>
         <span class="housing-card-type">Гостиница</span>
         <span class="housing-card-price">От 3000 ₽</span>
@@ -152,11 +152,7 @@
       </li>
     </ul>
 
-    <hr>
-
     <a class="housing button btn" href="#">Загрузить ещё</a>
-
-    <hr>
 
     <ul class="pagination">
       <li class="pagination-item">
@@ -179,13 +175,13 @@
       </li>
     </ul>
 
-    <div class="count-pages">
+    <form class="count-pages" action="https://echo.htmlacademy.ru" method="get">
       <label>Гостиниц на странице:
         <select name="housing-count">
-          <option value="current">4</option>
+          <option selected>4</option>
         </select>
       </label>
-    </div>
+    </form>
   </section>
 
   <div class="services">
