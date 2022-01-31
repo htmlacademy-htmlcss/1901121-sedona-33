@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>{% block title %}HTML Academy: Седона{% endblock %}</title>
-  </head>
-  <body>
-    <header class="page-header">
-      <nav class="navigation">
-        <a class="navigation-logo" href="">
-          <img class="page-header-logo" src="/images/logo-header.svg" width="139" height="70" alt="Логотип города Седона.">
-        </a>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" {% block href_main %}{% endblock %}>Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" {% block href_catalog %}href="catalog.html"{% endblock %}>Гостиницы</a>
-          </li>
-        </ul>
 
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link search" href="">
-              <span class="visually-hidden">Поиск.</span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link fav" href="#!">
-              <span class="fav-count">12
-                <span class="visually-hidden">Количество лайков.</span>
-              </span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link btn" href="#">Хочу сюда!</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    {%block main %}Страница в разработке
-    {%endblock%}
-    <footer class="page-footer">
-      <section class="footer-social">
-        <h2 class="visually-hidden">Давайте дружить</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="button tw" href="https://twitter.com/htmlacademy_ru">
-              <span class="visually-hidden">Twitter.</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="button fb" href="https://facebook.com/htmlacademy">
-              <span class="visually-hidden">Facebook.</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="button yt" href="https://www.youtube.com/c/HTMLAcademyRUS">
-              <span class="visually-hidden">Youtube.</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>{% block title %}HTML Academy: Седона{% endblock %}</title>
+</head>
 
-      <section class="footer-contacts">
-        <h2 class="visually-hidden">Телефон для связи.</h2>
-        <address class="footer-contacts-address">
-          <p class="footer-cotacts-address-phone">+7(495) 666-02-66</p>
-        </address>
-      </section>
+<body>
+  <header class="page-header">
+    <nav class="navigation">
+      <a class="navigation-logo" href="">
+        <img class="page-header-logo" src="images/logo-header.svg" width="139" height="70"
+          alt="Логотип города Седона.">
+      </a>
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link" {% block href_main %}href="index.html"{% endblock %}>Главная</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">О Седоне</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" {% block href_catalog %}href="catalog.html"{% endblock %}>Гостиницы</a>
+        </li>
+      </ul>
 
-      <section class="footer-logo">
-        <h2 class="visually-hidden">Логотип автора сайта.</h2>
-        <a href="https://htmlacademy.ru" target="_blank">
-          <img class="footer-logo" src="/images/logo-html.svg" width="115" height="34" alt="HTML Академия.">
-        </a>
-      </section>
-    </footer>
-  </body>
+      <ul class="navigation-list navigation-user">
+        <li class="navigation-item">
+          <a class="navigation-link search" href="#">
+            <span class="visually-hidden">Поиск.</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link fav" href="#!">
+            <span class="fav-count">12
+              <span class="visually-hidden">Количество лайков.</span>
+            </span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link-btn btn" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  {%block main %}
+
+  {%endblock%}
+
+  <footer class="page-footer">
+    <section class="footer-social">
+      <h2 class="visually-hidden">Давайте дружить</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a class="button tw" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">Twitter.</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="button fb" href="https://facebook.com/htmlacademy">
+            <span class="visually-hidden">Facebook.</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="button yt" href="https://www.youtube.com/c/HTMLAcademyRUS">
+            <span class="visually-hidden">Youtube.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="footer-contacts">
+      <h2 class="visually-hidden">Телефон для связи.</h2>
+      <address class="footer-contacts-address">
+        <a class="footer-cotacts-address-phone" href="tel:+74956660266">+7(812) 812-12-12</a>
+      </address>
+    </section>
+
+    <section class="footer-logo">
+      <h2 class="visually-hidden">Логотип автора сайта.</h2>
+      <a href="https://htmlacademy.ru" target="_blank">
+        <img class="footer-logo" src="images/logo-html.svg" width="115" height="34" alt="HTML Академия.">
+      </a>
+    </section>
+  </footer>
+</body>
+
 </html>
