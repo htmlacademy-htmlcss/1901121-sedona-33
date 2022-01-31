@@ -12,10 +12,10 @@ const buildHTML = () => src(['source/**/*.html', '!source/**/_*.html'])
     })()
   ]))
   .pipe(require('gulp-w3c-html-validator')())
-  .pipe(require('gulp-prettier')())
+  .pipe(require('gulp-html-beautify')())
   .pipe(dest('.'));
 
-const buildCSS = () => src(['source/css/**/*.css', '!source/css/**/_*.css'])
+const buildCSS = () => src(['source/**/*.css', '!source/**/_*.css'])
   .pipe(require('gulp-postcss')([
     require('postcss-easy-import')(),
     require('stylelint')({ fix: true }),
@@ -25,9 +25,9 @@ const buildCSS = () => src(['source/css/**/*.css', '!source/css/**/_*.css'])
       throwError: false
     })
   ]))
-  .pipe(dest('css'));
+  .pipe(dest('.'));
 
-const optimizeImages = () => src('source/img/**/*.{svg,png,jpg}')
+const optimizeImages = () => src('source/**/*.{svg,png,jpg}')
   .pipe(imagemin([
     imagemin.svgo({
       plugins: [
@@ -60,7 +60,7 @@ const optimizeImages = () => src('source/img/**/*.{svg,png,jpg}')
     imagemin.mozjpeg({ quality: 75, progressive: true }),
     imagemin.optipng()
   ]))
-  .pipe(dest('img'));
+  .pipe(dest('.'));
 
 const reload = (done) => {
   server.reload();
@@ -75,8 +75,8 @@ const startServer = () => {
   });
 
   watch('source/**/*.html', series(buildHTML, reload));
-  watch('source/css/**/*.css', series(buildCSS, reload));
-  watch('source/img/**/*.{svg,png,jpg}', series(optimizeImages, reload));
+  watch('source/**/*.css', series(buildCSS, reload));
+  watch('source/**/*.{svg,png,jpg}', series(optimizeImages, reload));
 };
 
 exports.default = series(parallel(buildHTML, buildCSS, optimizeImages), startServer);
