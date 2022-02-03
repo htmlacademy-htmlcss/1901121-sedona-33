@@ -2,7 +2,8 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  src: local("PT Sans"),
+    url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +11,8 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  src: local("PT Sans"),
+    url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -60,17 +62,11 @@ body {
   line-height: 13px;
 }
 
-.navigation-link-btn {
-  padding: 9px 15px 8px 15px;
-  font-size: 16px;
-  line-height: 20px;
-}
-
 .navigation-item {
   text-align: center;
 }
 
-.main-index {
+.main-intro {
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -157,12 +153,11 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.find-hotel-btn {
+.find-hotel-button {
   padding: 15px;
   font-size: 20px;
   line-height: 36px;
   display: block;
-  box-sizing: border-box;
   margin: 0 auto;
   font-weight: 700;
   background-color: rgba(117, 98, 87, 1);
@@ -171,10 +166,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
-}
-
-.navigation-link-btn.btn {
-  border-radius: 4px;
 }
 
 .subscribe {
@@ -205,7 +196,7 @@ button.button-email {
 
 /* каталог */
 
-.main-inner {
+.main {
   background-color: #ffffff;
 }
 
@@ -303,7 +294,7 @@ button.button-email {
   border-radius: 4px;
 }
 
-.favor-active {
+.favor-Active {
   background-color: #7db54f;
 }
 
@@ -320,12 +311,12 @@ li {
   border: 2px solid #e5e5e5;
 }
 
-.mode-light {
+.mode-tile {
   background-image: url("../images/button-light.svg");
   border: 2px solid #000000;
 }
 
-.mode-table {
+.mode-slideshow {
   background-image: url("../images/button-table.svg");
 }
 
@@ -333,31 +324,7 @@ li {
   background-image: url("../images/button-list.svg");
 }
 
-/* .button-light {
-  background-image: url("../images/button-light.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #fff;
-  border: 2px solid #000000;
-}
-
-.button-table {
-  background-image: url("../images/button-table.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #fff;
-  border: 2px solid #E5E5E5;
-}
-
-.button-list {
-  background-image: url("../images/button-list.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #fff;
-  border: 2px solid #E5E5E5;
-} */
-
-.btn-load {
+.button-load {
   background-color: #83b3d3;
   font-size: 20px;
 }
