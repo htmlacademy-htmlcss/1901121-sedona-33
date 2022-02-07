@@ -1,261 +1,108 @@
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("PT Sans"),
-    url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local("PT Sans"),
-    url("../fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
+html {
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
-
   font-size: 18px;
-  line-height: 21px;
+  line-height: 1.16667;
   background-color: #ffffff;
-  color: #000000;
 }
 
-.visually-hidden {
-  visibility: hidden;
+.advantages-header {
+  margin: 0;
+  padding: 0;
 }
 
-/* шапка страницы */
-
-.navigation-link {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
-  text-decoration: none;
-  text-transform: capitalize;
-  color: inherit;
+.advantages-list {
+  list-style: none;
+  text-align: center;
+  color: #333333;
+  padding: 0;
+  margin: 0;
 }
 
-.navigation-list {
+.advantages-list .advantages-group {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 384px 384px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.advantages-list .advantages-sublist {
+  display: flex;
+}
+
+.advantages-info {
+  width: 400px;
+  margin: 0;
+  padding-top: 98px;
+  padding-bottom: 87px;
+}
+
+.advantages-pic {
+  width: 800px;
+  margin: 0;
+}
+
+.advantages-header .section-description {
+  line-height: 36px;
+  max-width: 720px;
+  margin: 0 auto 80px;
+}
+
+.advantages-sublist {
   list-style: none;
 }
 
-.search {
-  background-image: url("../images/search.svg");
-  background-repeat: no-repeat;
-}
-
-.fav {
-  background-image: url("../images/favorite.svg");
-  background-repeat: no-repeat;
-}
-
-.fav-count {
-  background-color: #7db54f;
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 10px;
-  line-height: 13px;
-}
-
-.navigation-item {
-  text-align: center;
-}
-
-.main-intro {
-  background-image: url("../images/index-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-
-.main-intro {
-  text-align: center;
-}
-
-.section-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.section-description {
-  font-size: 22px;
-  line-height: 36px;
-  text-align: center;
-}
-
-.advantages-info h3 {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.first,
-.second {
-  background-color: rgba(131, 179, 211, 1);
-  color: #ffffff;
-}
-
-.first h3,
-.second h3 {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.advantages-item,
-.advantages-item li {
-  list-style: none;
-  text-align: center;
-}
-
-.advantage-item h3 {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.house {
-  background-color: rgba(131, 179, 211, 0.12);
-  background-image: url("../images/home.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-}
-
-.meal {
-  background-image: url("../images/meal.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-}
-
-.souvenir {
-  background-color: rgba(131, 179, 211, 0.12);
-  background-image: url("../images/gift.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-}
-
-.third,
-.fifth {
+.advantages-info {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.fourth {
+.advantages-info-dark {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.find-hotel-button {
-  padding: 15px;
-  font-size: 20px;
-  line-height: 36px;
-  display: block;
-  margin: 0 auto;
-  font-weight: 700;
-  background-color: rgba(117, 98, 87, 1);
-  text-align: center;
+.advantages-sublist .advantages-info:nth-child(2n) {
+  background-color: transparent;
+}
+
+.advantages-group > .advantages-info {
+  background-color: rgb(131, 179, 211);
   color: #ffffff;
-  text-decoration: none;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
   text-transform: uppercase;
-  border-radius: 10px;
 }
 
-.subscribe {
-  background-image: url("../images/background-email.jpg");
-  background-size: 100% 411px;
+.advantages-iconable {
   background-repeat: no-repeat;
-  color: #ffffff;
+  background-position: 50% 0;
 }
 
-.signup-subscribe {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: #f2f2f2;
+.advantages-iconable-house {
+  background-image: url("../images/home.svg");
 }
 
-button.button-email {
-  padding: 10px;
-  border: none;
-  background-color: rgba(131, 179, 211, 1);
-  color: #ffffff;
-  border-radius: 10px;
+.advantages-iconable-meal {
+  background-image: url("../images/meal.svg");
 }
 
-.subscribe-form {
-  text-align: center;
+.advantages-iconable-souvenir {
+  background-image: url("../images/gift.svg");
 }
-
-/* каталог */
-
-.main {
-  background-color: #ffffff;
-}
-
-.inner-header {
-  background-image: url("../images/catalog-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  color: #ffffff;
-}
-
-.inner-header-title {
-  font-size: 60px;
-  line-height: 77px;
-  font-weight: 700;
-}
-
-.breadcrumbs {
-  list-style: none;
-}
-
-.breadcrumbs-item:first-child {
-  background-image: url("../images/icon-home.svg");
-  background-repeat: no-repeat;
-}
-
-.breadcrumbs-item {
-  font-size: 16px;
-  line-height: 21px;
-}
-
-.catalog-filter-item,
-.housing-card {
-  list-style: none;
-}
-
-.catalog-filter-title {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
-.control-input {
-  line-height: 23px;
-}
-
-/* выпадашка */
-
-.select-control {
-  font-size: 18px;
-  padding: 5px;
-  border: 2px solid #e5e5e5;
-  border-radius: 4px;
-}
-
-/* кнопки */
 
 .button {
   font-size: 16px;
-  line-height: 21px;
+  line-height: 1.29375;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
@@ -298,38 +145,185 @@ button.button-email {
   background-color: #7db54f;
 }
 
-/* варианты отображения результатов на странице */
-
-li {
-  list-style: none;
-}
-
-.mode {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #ffffff;
-  border: 2px solid #e5e5e5;
-}
-
-.mode-tile {
-  background-image: url("../images/button-light.svg");
-  border: 2px solid #000000;
-}
-
-.mode-slideshow {
-  background-image: url("../images/button-table.svg");
-}
-
-.mode-list {
-  background-image: url("../images/button-list.svg");
-}
+/* кнопка загрузки */
 
 .button-load {
   background-color: #83b3d3;
   font-size: 20px;
 }
 
-/* пагинатор */
+/* кнопка поиска гостиницы */
+
+.find-hotel-button {
+  padding: 15px;
+  font-size: 20px;
+  line-height: 36px;
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
+  background-color: rgba(117, 98, 87, 1);
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.page-footer {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.tw {
+  background-color: transparent;
+  background-image: url("../images/social-twitter.svg");
+  background-repeat: no-repeat;
+}
+
+.fb {
+  background-color: transparent;
+  background-image: url("../images/social-facebook.svg");
+  background-repeat: no-repeat;
+}
+
+.yt {
+  background-color: transparent;
+  background-image: url("../images/social-youtube.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  min-width: 107px;
+  margin-top: 49px;
+  margin-bottom: 53px;
+}
+
+.footer-social-item {
+  margin-right: 29px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
+}
+
+.footer-contacts-address {
+  margin-top: 40px;
+}
+
+.footer-cotacts-address-phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-logo {
+  padding-bottom: 44px;
+}
+
+.housing-card-title {
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.housing-card-type,
+.housing-card-price {
+  line-height: 1.29389;
+}
+
+.housing-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+div.main-intro {
+  display: block;
+}
+
+.main-intro {
+  background-color: rgb(131, 179, 211);
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 0 63px;
+  min-height: 485px;
+  display: block;
+}
+
+.main-intro-logo {
+  /* display: block; */
+  margin-top: 51.4px;
+  margin-left: 371.3px;
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 440px;
+}
+
+.navigation-user {
+  max-width: 290px;
+  margin-left: auto;
+}
+
+.navigation-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+  color: inherit;
+  background-repeat: no-repeat;
+}
+
+.navigation-link-button {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #756257;
+  padding: 9px;
+  border-radius: 4px;
+  border: none;
+}
+
+.navigation-search {
+  background-image: url("../images/search.svg");
+}
+
+.navigation-fav {
+  background-image: url("../images/fav.svg");
+}
+
+.navigation-fav-count {
+  background-color: #7db54f;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 13px;
+}
 
 .pagination {
   background-color: #ffffff;
@@ -354,38 +348,164 @@ li {
   padding: 5px;
 }
 
-/* подвал */
-
-.tw {
-  background-image: none;
-  background-color: transparent;
-  background-image: url("../images/social-twitter.svg");
-  background-repeat: no-repeat;
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.fb {
-  background-image: none;
-  background-color: transparent;
-  background-image: url("../images/social-facebook.svg");
-  background-repeat: no-repeat;
+.section-description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
 }
 
-.yt {
-  background-image: none;
-  background-color: transparent;
-  background-image: url("../images/social-youtube.svg");
-  background-repeat: no-repeat;
+section {
+  display: block;
 }
 
-.footer-social-list {
+.services {
+  padding: 91px 240px 93px 240px;
+}
+
+.subscribe {
+  background-image: url("../images/background-email.jpg");
+  background-size: 100% 411px;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.signup-subscribe {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+button.button-email {
+  padding: 10px;
+  border: none;
+  background-color: rgba(131, 179, 211, 1);
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.subscribe-form {
+  text-align: center;
+}
+
+.service {
+  display: block;
+}
+
+.subscribe {
+  padding: 94px 200px;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"),
+    url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans"),
+    url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* каталог */
+
+.main {
+  background-color: #ffffff;
+}
+
+.inner-header {
+  background-image: url("../images/catalog-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #ffffff;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 1.294;
+  font-weight: 700;
+}
+
+.breadcrumbs {
   list-style: none;
 }
 
-.footer-cotacts-address-phone {
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-weight: 400;
-  text-decoration: none;
-  color: #000000;
+.breadcrumbs-item:first-child {
+  background-image: url("../images/icon-home.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-item,
+.housing-card {
+  list-style: none;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.control-input {
+  line-height: 23px;
+}
+
+/* выпадашка */
+
+.select-control {
+  font-size: 18px;
+  padding: 5px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+/* варианты отображения результатов на странице */
+
+li {
+  list-style: none;
+}
+
+.mode {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.mode-tile {
+  background-image: url("../images/button-light.svg");
+  border: 2px solid #000000;
+}
+
+.mode-slideshow {
+  background-image: url("../images/button-table.svg");
+}
+
+.mode-list {
+  background-image: url("../images/button-list.svg");
 }

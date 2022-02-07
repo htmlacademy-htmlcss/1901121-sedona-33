@@ -1,0 +1,58 @@
+.page-footer {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.tw {
+  background-color: transparent;
+  background-image: url("../images/social-twitter.svg");
+  background-repeat: no-repeat;
+}
+
+.fb {
+  background-color: transparent;
+  background-image: url("../images/social-facebook.svg");
+  background-repeat: no-repeat;
+}
+
+.yt {
+  background-color: transparent;
+  background-image: url("../images/social-youtube.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  min-width: 107px;
+  margin-top: 49px;
+  margin-bottom: 53px;
+}
+
+.footer-social-item {
+  margin-right: 29px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
+}
+
+.footer-contacts-address {
+  margin-top: 40px;
+}
+
+.footer-cotacts-address-phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-logo {
+  padding-bottom: 44px;
+}

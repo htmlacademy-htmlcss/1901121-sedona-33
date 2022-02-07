@@ -12,8 +12,8 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
-      <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" src="images/logo-header.svg" alt="Логотип города Седона." width="139" height="70">
+      <a class="navigation-logo-link" href="index.html">
+        <img class="navigation-logo" src="images/logo-header.svg" alt="Логотип города Седона." width="139" height="70">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
@@ -29,46 +29,48 @@
 
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link search" href="#">
+          <a class="navigation-link navigation-search" href="#">
             <span class="visually-hidden">Поиск.</span>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link fav" href="#!">
-            <span class="fav-count">
+          <a class="navigation-link navigation-fav" href="#!">
+            <span class="navigation-fav-count">
               <span class="visually-hidden">Количество лайков:</span>
               12
             </span>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link-btn btn" href="#">Хочу сюда!</a>
+          <a class="navigation-link-button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    {%block main %}{%endblock%}
+    <div class="page-container">
+      {%block main %}{%endblock%}
 
-    <div class="service subscribe">
-      <h2 class="section-title">
-        Подпишитесь на рассылку
-      </h2>
-      <p class="section-description">
-        Только полезная информация и никакого спама, <br> честное бойскаутское!
-      </p>
-      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label>
-          <span class="visually-hidden">
-            Ваш e-mail.
-          </span>
-          <input class="signup-subscribe" type="email" placeholder="Ваш e-mail">
-        </label>
-        <button class="button button-email" type="submit">
-          Подписаться
-        </button>
-      </form>
+      <div {%block subscribe %}class="service subscribe"{%endblock%}>
+        <h2 class="section-title">
+          Подпишитесь на рассылку
+        </h2>
+        <p class="section-description">
+          Только полезная информация и никакого спама, <br> честное бойскаутское!
+        </p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label>
+            <span class="visually-hidden">
+              Ваш e-mail.
+            </span>
+            <input class="signup-subscribe" type="email" placeholder="Ваш e-mail">
+          </label>
+          <button class="button button-email" type="submit">
+            Подписаться
+          </button>
+        </form>
+      </div>
     </div>
   </main>
 
