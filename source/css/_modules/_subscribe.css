@@ -1,0 +1,34 @@
+.subscribe {
+  background-image: url("../images/background-email.jpg");
+  background-size: 100% 411px;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.signup-subscribe {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #F2F2F2;
+}
+
+button.button-email {
+  padding: 10px;
+  border: none;
+  background-color: rgba(131, 179, 211, 1);
+  color:#ffffff;
+  border-radius: 10px;
+
+}
+
+.subscribe-form {
+  text-align: center;
+}
+
+.service {
+  display: block;
+}
+
+.subscribe {
+  padding: 94px 200px;
+}

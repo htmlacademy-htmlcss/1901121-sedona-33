@@ -1,204 +1,10 @@
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("PT Sans"),
-    url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local("PT Sans"),
-    url("../fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
-}
-
-body {
-  font-family: "PT Sans", sans-serif;
-
-  font-size: 18px;
-  line-height: 21px;
-  background-color: #ffffff;
-  color: #000;
-}
-
-.visually-hidden {
-  visibility: hidden;
-}
-
-/* шапка страницы */
-
-.navigation-link {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
-  text-decoration: none;
-  text-transform: capitalize;
-  color: inherit;
-}
-
-.navigation-list {
-  list-style: none;
-}
-
-.search {
-  background-image: url("../images/search.svg");
-  background-repeat: no-repeat;
-}
-
-.fav {
-  background-image: url("../images/favorite.svg");
-  background-repeat: no-repeat;
-}
-
-.fav-count {
-  background-color: #7DB54F;
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 10px;
-  line-height: 13px;
-}
-
-.navigation-item {
-  text-align: center;
-}
-
-.main-intro {
-  background-image: url("../images/index-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-
-.main-intro {
-  text-align: center;
-}
-
-.section-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.section-description {
-  font-size: 22px;
-  line-height: 36px;
-  text-align: center;
-}
-
-.advantages-info h3 {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.first,
-.second {
-  background-color: rgba(131, 179, 211, 1);
-  color: #ffffff;
-}
-
-.first h3,
-.second h3 {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.advantages-item,
-.advantages-item li {
-  list-style: none;
-  text-align: center;
-}
-
-.advantage-item h3{
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.house {
-  background-color: rgba(131, 179, 211, 0.12);
-  background-image: url("../images/home.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-}
-
-.meal {
-  background-image: url("../images/meal.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-}
-
-.souvenir {
-  background-color: rgba(131, 179, 211, 0.12);
-  background-image: url("../images/gift.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-}
-
-.third,
-.fifth {
-  background-color: rgba(131, 179, 211, 0.12)
-}
-
-.fourth {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.find-hotel-button {
-  padding: 15px;
-  font-size: 20px;
-  line-height: 36px;
-  display: block;
-   margin: 0 auto;
-  font-weight: 700;
-  background-color: rgba(117, 98, 87, 1);
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 10px;
-}
-
-.subscribe {
-  background-image: url("../images/background-email.jpg");
-  background-size: 100% 411px;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-
-.signup-subscribe {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: #F2F2F2;
-}
-
-button.button-email {
-  padding: 10px;
-  border: none;
-  background-color: rgba(131, 179, 211, 1);
-  color:#ffffff;
-  border-radius: 10px;
-
-}
-
-.subscribe-form {
-  text-align: center;
-}
+@import url("_global.css");
+@import url("_modules/**/*.css");
+@import url("_fonts.css");
 
 /* каталог */
-
 .main {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .inner-header {
@@ -210,7 +16,7 @@ button.button-email {
 
 .inner-header-title {
   font-size: 60px;
-  line-height: 77px;
+  line-height: 1.29400;
   font-weight: 700;
 }
 
@@ -222,7 +28,6 @@ button.button-email {
   background-image: url("../images/icon-home.svg");
   background-repeat: no-repeat;
 }
-
 
 .breadcrumbs-item {
   font-size: 16px;
@@ -242,72 +47,21 @@ button.button-email {
 .control-input {
   line-height: 23px;
 }
-
 /* выпадашка */
-
 .select-control {
   font-size: 18px;
   padding: 5px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
-
-/* кнопки */
-
-.button {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  background-color: #756257;
-  padding: 9px;
-  border-radius: 4px;
-  border: none;
-}
-
-.button-apply {
-  background-color: #83B3D3;
-}
-
-.button-reset {
-  background-image: none;
-  background-color: transparent;
-  color: #000000;
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
-  text-transform: capitalize;
-}
-
-.favor {
-  background-color: #83B3D3;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  padding: 9px;
-  border-radius: 4px;
-}
-
-.favor-Active {
-  background-color: #7DB54F;
-}
-
 /* варианты отображения результатов на странице */
-
 li {
   list-style: none;
 }
 .mode {
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 2px solid #E5E5E5;
 }
 
@@ -322,71 +76,4 @@ li {
 
 .mode-list {
   background-image: url("../images/button-list.svg");
-}
-
-.button-load {
-  background-color: #83B3D3;
-  font-size: 20px;
-}
-
-/* пагинатор */
-
-.pagination {
-  background-color: #ffffff;
-}
-
-.pagination-link {
-  color: #ffffff;
-  background-color: #83B3D3;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.pagination-active {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.count-pages select{
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  padding: 5px;
-}
-
-/* подвал */
-
-.tw{
-  background-image: none;
-  background-color: transparent;
-  background-image: url("../images/social-twitter.svg");
-  background-repeat: no-repeat;
-}
-
-.fb{
-  background-image: none;
-  background-color: transparent;
-  background-image: url("../images/social-facebook.svg");
-  background-repeat: no-repeat;
-}
-
-.yt{
-  background-image: none;
-  background-color: transparent;
-  background-image: url("../images/social-youtube.svg");
-  background-repeat: no-repeat;
-}
-
-
-.footer-social-list {
-  list-style: none;
-}
-
-.footer-cotacts-address-phone {
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-weight: 400;
-  text-decoration: none;
-  color: #000000;
 }
