@@ -10,6 +10,7 @@
   padding: 9px;
   border-radius: 4px;
   border: none;
+  width: 132px;
 }
 
 .button-apply {
@@ -37,6 +38,7 @@
   text-align: center;
   padding: 9px;
   border-radius: 4px;
+  width: 140px;
 }
 
 .favor-Active {

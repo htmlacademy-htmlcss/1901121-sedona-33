@@ -8,6 +8,11 @@
   margin: 0;
 }
 
+.subscribe-catalog {
+  min-height: 411px;
+  margin: 0;
+}
+
 .signup-subscribe {
   padding: 10px;
   border-radius: 10px;
@@ -34,11 +39,13 @@ button.button-email {
   display: block;
 }
 
-.subscribe .section-title {
+.subscribe .section-title,
+.subscribe-catalog .section-title {
   margin: 0 0 29px;
   padding-top: 94px;
 }
 
-.subscribe .section-description {
+.subscribe .section-description,
+.subscribe-catalog .section-description {
   margin: 0 0 46px;
 }
