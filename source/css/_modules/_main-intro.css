@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-div.main-intro {
+div .main-intro {
   display: block;
 }
 
@@ -18,7 +18,7 @@ div.main-intro {
 }
 
 .main-intro-logo {
-  /* display: block; */
-  margin-top: 51.4px;
-  margin-left: 371.3px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
 }

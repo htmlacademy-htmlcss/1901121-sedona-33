@@ -2,7 +2,7 @@
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .tw {
@@ -26,9 +26,6 @@
 .footer-social-list {
   list-style: none;
   display: flex;
-  min-width: 107px;
-  margin-top: 49px;
-  margin-bottom: 53px;
 }
 
 .footer-social-item {
@@ -38,21 +35,29 @@
 .footer-social-item:last-child {
   margin-right: 0;
 }
+.footer-social {
+  width: 107px;
+  margin-right: 61px;
+}
+.footer-contacts {
+  width: 720px;
+  margin-right: 53px;
+}
 
 .footer-contacts-address {
-  margin-top: 40px;
+  margin: 0;
+  text-align: center;
 }
 
 .footer-cotacts-address-phone {
   font-size: 40px;
   font-style: normal;
   line-height: 40px;
-  text-align: center;
   font-weight: 400;
   text-decoration: none;
   color: #000000;
 }
 
 .footer-logo {
-  padding-bottom: 44px;
+  min-width: 115px;
 }

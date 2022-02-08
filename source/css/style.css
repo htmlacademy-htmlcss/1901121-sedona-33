@@ -8,10 +8,14 @@
 }
 
 .inner-header {
+  background-color: rgb(131, 179, 211);
   background-image: url("../images/catalog-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   color: #ffffff;
+  margin: 0 0 44px;
+  min-height: 408px;
+  display: block;
 }
 
 .inner-header-title {

@@ -3,35 +3,9 @@
   padding: 0;
 }
 
-.advantages-list {
-  list-style: none;
-  text-align: center;
-  color: #333333;
-  padding: 0;
-  margin: 0;
-}
-
-.advantages-list .advantages-group {
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 384px 384px;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.advantages-list .advantages-sublist {
-  display: flex;
-}
-
-.advantages-info {
-  width: 400px;
-  margin: 0;
-  padding-top: 98px;
-  padding-bottom: 87px;
-}
-
-.advantages-pic {
-  width: 800px;
-  margin: 0;
+.advantages-header .section-title {
+  margin: 63px auto 31px;
+  max-width: 720px;
 }
 
 .advantages-header .section-description {
@@ -40,19 +14,37 @@
   margin: 0 auto 80px;
 }
 
-.advantages-sublist {
+.advantages-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+  text-align: center;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  grid-column: span 3;
+}
+
+.advantages-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: span 3;
+}
+
+.advantages-pic {
+  display: block;
+  grid-column: span 2;
 }
 
 .advantages-info {
+  margin: 0;
+  padding-top: 98px;
+  padding-bottom: 87px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-info-dark {
+.advantages-info:nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.2);
-}
-.advantages-sublist .advantages-info:nth-child(2n) {
-  background-color: transparent;
 }
 
 .advantages-group > .advantages-info {
@@ -60,11 +52,25 @@
   color: #ffffff;
 }
 
+.advantages-sublist .advantages-info:nth-child(2n) {
+  background-color: transparent;
+}
+
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0 0 30px;
+}
+
+.advantages-sublist .advantages-info{
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-description {
+  margin: 30px 0 0;
 }
 
 .advantages-iconable {
@@ -74,12 +80,25 @@
 
 .advantages-iconable-house {
   background-image: url("../images/home.svg");
+  background-position: 50% 55px;
 }
 
 .advantages-iconable-meal {
   background-image: url("../images/meal.svg");
+  background-position: 50% 55px;
 }
 
 .advantages-iconable-souvenir {
   background-image: url("../images/gift.svg");
+  background-position: 50% 55px;
+}
+
+.advantages-iconable .advantages-title {
+  padding-top: 184px;
+  margin: 0 0 20px
+}
+
+.advantages-iconable .advantages-description {
+  margin: 20px 0 0;
+  padding-bottom: 79px;
 }
