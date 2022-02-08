@@ -53,9 +53,10 @@
   font-size: 20px;
   line-height: 36px;
   display: block;
-   margin: 0 auto;
+  margin: 0 auto 108px;
   font-weight: 700;
   background-color: rgba(117, 98, 87, 1);
+  width: 575px;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
