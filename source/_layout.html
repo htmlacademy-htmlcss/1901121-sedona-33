@@ -49,28 +49,27 @@
   </header>
 
   <main>
-    <div class="page-container">
-      {%block main %}{%endblock%}
 
-      <div {%block subscribe %}class="service subscribe"{%endblock%}>
-        <h2 class="section-title">
-          Подпишитесь на рассылку
-        </h2>
-        <p class="section-description">
-          Только полезная информация и никакого спама, <br> честное бойскаутское!
-        </p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label>
-            <span class="visually-hidden">
-              Ваш e-mail.
-            </span>
-            <input class="signup-subscribe" type="email" placeholder="Ваш e-mail">
-          </label>
-          <button class="button button-email" type="submit">
-            Подписаться
-          </button>
-        </form>
-      </div>
+    {%block main %}{%endblock%}
+
+    <div {%block subscribe %}class="service subscribe"{%endblock%}>
+      <h2 class="section-title">
+        Подпишитесь на рассылку
+      </h2>
+      <p class="section-description">
+        Только полезная информация и никакого спама, <br> честное бойскаутское!
+      </p>
+      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label>
+          <span class="visually-hidden">
+            Ваш e-mail.
+          </span>
+          <input class="signup-subscribe" type="email" placeholder="Ваш e-mail">
+        </label>
+        <button class="button button-email" type="submit">
+          Подписаться
+        </button>
+      </form>
     </div>
   </main>
 
