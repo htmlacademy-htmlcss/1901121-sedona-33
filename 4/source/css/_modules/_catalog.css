@@ -1,0 +1,96 @@
+.main {
+  background-color: #ffffff;
+}
+
+.container {
+  width: 1056px;
+  margin: 0 auto;
+}
+.inner-header {
+  background-color: rgb(131, 179, 211);
+  background-image: url("../images/catalog-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  margin: 0 0 44px;
+  min-height: 408px;
+  display: block;
+}
+
+.catalog-filter {
+  display: flex;
+}
+
+.catalog-filter-group {
+  text-align: left;
+  min-width: 220px;
+}
+
+.catalog-filter-group:last-of-type {
+  min-width: 300px;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 1.29400;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+/* крошки */
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs-item:first-child {
+  background-image: url("../images/icon-home.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-item,
+.housing-card {
+  list-style: none;
+}
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.control-input {
+  line-height: 23px;
+}
+/* выпадашка */
+.select-control {
+  font-size: 18px;
+  padding: 5px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+/* варианты отображения результатов на странице */
+li {
+  list-style: none;
+}
+.mode {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #ffffff;
+  border: 2px solid #E5E5E5;
+}
+
+.mode-tile {
+  background-image: url("../images/button-light.svg");
+  border: 2px solid #000000;
+}
+
+.mode-slideshow {
+  background-image: url("../images/button-table.svg");
+}
+
+.mode-list {
+  background-image: url("../images/button-list.svg");
+}

@@ -1,0 +1,26 @@
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+section {
+  display: block;
+}
+
+.services .section-title {
+  margin: 0 0 29px;
+  padding-top: 91px;
+}
+
+.services .section-description {
+  margin: 0 0 56px;
+}

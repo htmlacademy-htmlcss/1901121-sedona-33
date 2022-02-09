@@ -1,0 +1,67 @@
+.button {
+  font-size: 16px;
+  line-height: 1.29375;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: #756257;
+  padding: 9px;
+  border-radius: 4px;
+  border: none;
+  width: 132px;
+}
+
+.button-apply {
+  background-color: #83B3D3;
+}
+
+.button-reset {
+  background-image: none;
+  background-color: transparent;
+  color: #000000;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.favor {
+  background-color: #83B3D3;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 9px;
+  border-radius: 4px;
+  width: 140px;
+}
+
+.favor-Active {
+  background-color: #7DB54F;
+}
+/* кнопка загрузки */
+.button-load {
+  background-color: #83B3D3;
+  font-size: 20px;
+}
+/* кнопка поиска гостиницы */
+.find-hotel-button {
+  padding: 15px;
+  font-size: 20px;
+  line-height: 36px;
+  display: block;
+  margin: 0 auto 108px;
+  font-weight: 700;
+  background-color: rgba(117, 98, 87, 1);
+  width: 575px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}

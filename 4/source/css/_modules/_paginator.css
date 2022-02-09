@@ -1,0 +1,22 @@
+.pagination {
+  background-color: #ffffff;
+}
+
+.pagination-link {
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pagination-active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.count-pages select{
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  padding: 5px;
+}

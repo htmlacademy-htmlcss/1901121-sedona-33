@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
+  <title>{% block title %}Седона{% endblock %}</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="navigation">
+      <a class="navigation-logo-link" href="index.html">
+        <img class="navigation-logo" src="images/logo-header.svg" alt="Логотип города Седона." width="139" height="70">
+      </a>
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link" {% block href_main %}href="index.html"{% endblock %}>Главная</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">О Седоне</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" {% block href_catalog %}href="catalog.html"{% endblock %}>Гостиницы</a>
+        </li>
+      </ul>
+
+      <ul class="navigation-list navigation-user">
+        <li class="navigation-item">
+          <a class="navigation-link navigation-search" href="#">
+            <span class="visually-hidden">Поиск.</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-fav" href="#!">
+            <span class="navigation-fav-count">
+              <span class="visually-hidden">Количество лайков:</span>
+              12
+            </span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link-button" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    {%block main %}{%endblock%}
+
+    <div {%block subscribe %}class="service subscribe"{%endblock%}>
+      <h2 class="section-title">
+        Подпишитесь на рассылку
+      </h2>
+      <p class="section-description">
+        Только полезная информация и никакого спама, <br> честное бойскаутское!
+      </p>
+      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label>
+          <span class="visually-hidden">
+            Ваш e-mail.
+          </span>
+          <input class="signup-subscribe" type="email" placeholder="Ваш e-mail">
+        </label>
+        <button class="button button-email" type="submit">
+          Подписаться
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <section class="footer-social">
+      <h2 class="visually-hidden">Давайте дружить.</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a class="button tw" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">Twitter.</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="button fb" href="https://facebook.com/htmlacademy">
+            <span class="visually-hidden">Facebook.</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="button yt" href="https://www.youtube.com/c/HTMLAcademyRUS">
+            <span class="visually-hidden">Youtube.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="footer-contacts">
+      <h2 class="visually-hidden">Телефон для связи.</h2>
+      <address class="footer-contacts-address">
+        <a class="footer-cotacts-address-phone" href="tel:+74956660266">+7(812) 812-12-12</a>
+      </address>
+    </section>
+
+    <section class="footer-logo">
+      <h2 class="visually-hidden">Разработчик сайта.</h2>
+      <a href="https://htmlacademy.ru" target="_blank">
+        <img class="footer-logo" src="images/logo-htmlacademy.svg" alt="HTML Академия." width="115" height="34">
+      </a>
+    </section>
+  </footer>
+</body>
+
+</html>

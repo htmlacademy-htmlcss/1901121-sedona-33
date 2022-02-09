@@ -1,0 +1,61 @@
+.page-footer {
+  display: flex;
+  margin-top: auto;
+}
+
+.tw {
+  background-color: transparent;
+  background-image: url("../images/social-twitter.svg");
+  background-repeat: no-repeat;
+}
+
+.fb {
+  background-color: transparent;
+  background-image: url("../images/social-facebook.svg");
+  background-repeat: no-repeat;
+}
+
+.yt {
+  background-color: transparent;
+  background-image: url("../images/social-youtube.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social-list {
+  list-style: none;
+  display: flex;
+}
+
+.footer-social-item {
+  margin-right: 29px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
+}
+.footer-social {
+  width: 107px;
+  margin-right: 61px;
+}
+.footer-contacts {
+  width: 720px;
+  margin-right: 53px;
+}
+
+.footer-contacts-address {
+  margin: 0;
+  text-align: center;
+}
+
+.footer-cotacts-address-phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-logo {
+  min-width: 115px;
+}

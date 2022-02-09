@@ -1,0 +1,13 @@
+.housing-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.housing-card {
+  min-width: 33,33%;
+  margin-right: 18px;
+  margin-bottom: 10px;
+}
+
+.housing-card:nth-child(3n+3) {
+  margin-right: 0;
+}
