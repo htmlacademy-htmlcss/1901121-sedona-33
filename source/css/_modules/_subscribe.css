@@ -3,13 +3,7 @@
   background-image: url("../images/background-email.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 411px;
   color: #ffffff;
-  margin: 0;
-}
-
-.subscribe-catalog {
-  min-height: 411px;
   margin: 0;
 }
 
@@ -24,25 +18,27 @@ button.button-email {
   padding: 10px;
   border: none;
   background-color: rgba(131, 179, 211, 1);
-  color:#ffffff;
+  color: #ffffff;
   border-radius: 10px;
-
 }
 
 .subscribe-form {
   text-align: center;
-  margin: 0 0 94px;
+  margin: 0;
   min-height: 60px;
 }
 
-.service {
-  display: block;
+.service,
+.subscribe-catalog {
+  /* display: block;
+  margin-bottom: 40px; */
+  padding: 90px 72px 108px;
 }
 
 .subscribe .section-title,
 .subscribe-catalog .section-title {
   margin: 0 0 29px;
-  padding-top: 94px;
+  /* padding-top: 94px; */
 }
 
 .subscribe .section-description,

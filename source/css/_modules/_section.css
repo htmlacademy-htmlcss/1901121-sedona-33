@@ -12,13 +12,12 @@
   text-align: center;
 }
 
-section {
-  display: block;
+.services {
+  padding: 90px 72px 108px;
 }
 
 .services .section-title {
   margin: 0 0 29px;
-  padding-top: 91px;
 }
 
 .services .section-description {
