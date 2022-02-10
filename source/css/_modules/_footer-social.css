@@ -1,6 +1,8 @@
 .page-footer {
   display: flex;
   margin-top: auto;
+  padding: 40px 0;
+  vertical-align: middle;
 }
 
 .tw {
@@ -24,6 +26,8 @@
 .footer-social-list {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .footer-social-item {
@@ -33,13 +37,14 @@
 .footer-social-item:last-child {
   margin-right: 0;
 }
+
 .footer-social {
-  width: 107px;
-  margin-right: 61px;
+  width: 157px;
+  margin: 0 auto;
 }
+
 .footer-contacts {
-  width: 720px;
-  margin-right: 53px;
+  width: 620px;
 }
 
 .footer-contacts-address {
@@ -58,4 +63,5 @@
 
 .footer-logo {
   min-width: 115px;
+  margin: 0 auto;
 }

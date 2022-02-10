@@ -1,0 +1,56 @@
+.container-sort {
+  display: flex;
+  padding: 0 72px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* выпадашка */
+.select-control {
+  font-size: 18px;
+  padding: 5px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  width: 288px;
+  height: 48px;
+}
+
+/* варианты отображения результатов на странице */
+.container-mode {
+  list-style: none;
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.mode-item {
+  margin-right: 8px;
+}
+
+.mode-item:last-child {
+  margin-right: 0;
+}
+
+.mode {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.mode-tile {
+  background-color: transparent;
+  background-image: url("../images/button-light.svg");
+  border: 2px solid #000000;
+}
+
+.mode-slideshow {
+  background-color: transparent;
+  background-image: url("../images/button-table.svg");
+}
+
+.mode-list {
+  background-color: transparent;
+  background-image: url("../images/button-list.svg");
+}
