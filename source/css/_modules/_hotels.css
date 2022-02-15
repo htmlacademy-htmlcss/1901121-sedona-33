@@ -9,7 +9,7 @@
   width: 340px;
   padding-right: 18px;
   padding-bottom: 10px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .housing-card:nth-child(3n) {

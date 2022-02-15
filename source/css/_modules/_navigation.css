@@ -7,23 +7,31 @@
 .navigation-list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   width: 440px;
   margin-left: auto;
-}
-
-.navigation-user {
-  max-width: 290px;
-  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 17px 19px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
   text-decoration: none;
   color: inherit;
   background-repeat: no-repeat;
+}
+
+.navigation-user {
+  max-width: 290px;
+  margin-left: auto;
+}
+.navigation-user .navigation-link {
+  min-width: 42px;
+  min-height: 66px;
 }
 
 .navigation-link-button {
