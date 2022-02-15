@@ -30,8 +30,8 @@
   margin-left: auto;
 }
 .navigation-user .navigation-link {
-  min-width: 42px;
-  min-height: 66px;
+  /* min-width: 42px; */
+  /* min-height: 66px; */
 }
 
 .navigation-link-button {
