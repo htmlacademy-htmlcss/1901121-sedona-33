@@ -9,7 +9,7 @@
   <title>{% block title %}Седона{% endblock %}</title>
 </head>
 
-<body>
+<body class="container">
   <header class="page-header">
     <nav class="navigation">
       <a class="navigation-logo-link" href="index.html">
@@ -52,7 +52,7 @@
 
     {%block main %}{%endblock%}
 
-    <div {%block subscribe %}class="service subscribe" {%endblock%}>
+    <div class="subscribe {% block subscribe_class %}{% endblock %}">
       <h2 class="section-title">
         Подпишитесь на рассылку
       </h2>

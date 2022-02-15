@@ -1,19 +1,16 @@
 .pagination {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  width: 370px;
-}
-
-.pagination-item {
-  list-style: none;
-}
-
-.container-pagination {
   display: flex;
   padding: 0 72px;
   justify-content: space-between;
   align-items: center;
+}
+
+.pagination-list {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  list-style-type: none;
 }
 
 .pagination-link {
@@ -33,4 +30,5 @@
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   padding: 5px;
+  font-size: inherit;
 }

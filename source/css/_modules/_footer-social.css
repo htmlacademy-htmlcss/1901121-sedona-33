@@ -24,14 +24,11 @@
 }
 
 .footer-social-list {
-  list-style: none;
+  list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
-}
-
-.footer-social-item {
-  margin-right: 29px;
 }
 
 .footer-social-item:last-child {
