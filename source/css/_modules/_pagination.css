@@ -1,29 +1,45 @@
-.pagination {
+.container-pagination {
   display: flex;
-  padding: 0 72px;
-  justify-content: space-between;
+  padding: 0;
+  margin: 0;
   align-items: center;
+  background-color: #ffffff;
+  margin-top: 30px;
 }
 
-.pagination-list {
-  background-color: #ffffff;
+.pagination {
   display: flex;
   justify-content: space-between;
-  width: 370px;
   list-style-type: none;
 }
 
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  padding: 14px 20px;
   color: #ffffff;
   background-color: #83b3d3;
   text-decoration: none;
   font-size: 20px;
+  line-height: 26px;
   font-weight: 700;
+  border-radius: 4px;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .pagination-active {
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   color: #000000;
+}
+
+.count-pages {
+  margin-right: 72px;
+  margin-left: auto;
 }
 
 .count-pages select {
