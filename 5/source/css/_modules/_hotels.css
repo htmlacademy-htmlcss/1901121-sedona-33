@@ -1,0 +1,30 @@
+.housing-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 72px;
+}
+
+.housing-card {
+  margin: 0;
+  width: 340px;
+  padding-right: 18px;
+  padding-bottom: 10px;
+  list-style-type: none;
+}
+
+.housing-card:nth-child(3n) {
+  padding-right: 0;
+}
+
+.housing-card-image {
+  display: block;
+  padding: 20px;
+}
+
+.housing-card-title {
+  padding-left: 20px;
+}
+
+.housing-card p {
+  padding-left: 20px;
+}
