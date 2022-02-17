@@ -1,0 +1,31 @@
+.breadcrumbs {
+  list-style-type: none;
+  display: flex;
+  font-size: 16px;
+  line-height: 21px;
+  margin: -8px 0 0 4px;
+  padding: 0;
+  padding-bottom: 45px;
+}
+
+.breadcrumbs-link {
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 0 6px;
+}
+
+.breadcrumbs-item {
+  margin-top: 4px;
+  padding-right: 16px;
+  position: relative;
+}
+.breadcrumbs-icon-home {
+  background-image: url("../images/icon-home.svg");
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 22px;
+  height: 21px;
+}
