@@ -1,6 +1,6 @@
 .sorting {
   display: flex;
-  padding: 44px 72px 52px;
+  padding: 44px 72px 0;
   justify-content: space-between;
   align-items: center;
 }

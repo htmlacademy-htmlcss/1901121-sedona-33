@@ -12,27 +12,6 @@
   padding: 54px 72px 86px;
 }
 
-.catalog-filter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.catalog-filter-list {
-  padding: 0;
-}
-
-.catalog-filter-group {
-  text-align: left;
-  min-width: 180px;
-  border: 0;
-  padding: 0;
-}
-
-.catalog-filter-group:last-of-type {
-  min-width: 300px;
-}
-
 .inner-header-title {
   font-size: 60px;
   line-height: 1.294;
@@ -41,6 +20,13 @@
 }
 
 /* фильтр */
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.294;
+  margin: 0;
+}
+
 .catalog-filter-item {
   list-style-type: none;
   margin-bottom: 13px;
@@ -54,8 +40,31 @@
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0 0 30px;
+  padding: 0;
 }
 
 .control-input {
   line-height: 23px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-group {
+  margin: 14px 0 2rem 2rem;
+  min-width: 180px;
+  border: none;
+  padding: 0;
+}
+
+.catalog-filter-group:first-of-type {
+  margin-left: 0;
+}
+
+
+.catalog-filter-group:last-of-type {
+  min-width: 300px;
 }
