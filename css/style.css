@@ -168,21 +168,6 @@ body {
   width: 132px;
 }
 
-.button-apply {
-  background-color: #83b3d3;
-  margin-bottom: 20px;
-}
-
-.button-reset {
-  background-image: none;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
-  text-transform: capitalize;
-}
-
 .favor {
   background-color: #83b3d3;
   font-size: 16px;
@@ -194,7 +179,7 @@ body {
   text-align: center;
   padding: 9px;
   border-radius: 4px;
-  width: 140px;
+  width: 132px;
 }
 
 .favor-Active {
@@ -232,8 +217,22 @@ body {
 /* кнопки фильтра */
 
 .catalog-filter-button {
-  display: flex;
-  flex-direction: column;
+  width: 160px;
+  margin: auto 0 32px;
+  text-align: center;
+}
+
+.button-apply {
+  background-color: #83b3d3;
+  padding: 13px 15px 15px;
+}
+
+.button-reset {
+  background-color: transparent;
+  font: inherit;
+  margin: 17px 0 3px;
+  padding: 1px 12px 2px;
+  text-transform: capitalize;
 }
 
 .main {
@@ -251,27 +250,6 @@ body {
   padding: 54px 72px 86px;
 }
 
-.catalog-filter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.catalog-filter-list {
-  padding: 0;
-}
-
-.catalog-filter-group {
-  text-align: left;
-  min-width: 180px;
-  border: 0;
-  padding: 0;
-}
-
-.catalog-filter-group:last-of-type {
-  min-width: 300px;
-}
-
 .inner-header-title {
   font-size: 60px;
   line-height: 1.294;
@@ -280,6 +258,13 @@ body {
 }
 
 /* фильтр */
+
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.294;
+  margin: 0;
+}
 
 .catalog-filter-item {
   list-style-type: none;
@@ -294,10 +279,32 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0 0 30px;
+  padding: 0;
 }
 
 .control-input {
   line-height: 23px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-group {
+  margin: 14px 0 2rem 2rem;
+  min-width: 180px;
+  border: none;
+  padding: 0;
+}
+
+.catalog-filter-group:first-of-type {
+  margin-left: 0;
+}
+
+.catalog-filter-group:last-of-type {
+  min-width: 300px;
 }
 
 .container {
@@ -305,6 +312,8 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+/* тут пока пусто */
 
 .page-footer {
   display: flex;
@@ -380,34 +389,69 @@ body {
 }
 
 .housing-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 18px;
+  margin: 54px 0 0;
+  padding: 0 72px 34px;
 }
 
 .housing-card {
-  margin: 0;
   width: 340px;
-  padding-right: 18px;
-  padding-bottom: 10px;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
   list-style-type: none;
-}
-
-.housing-card:nth-child(3n) {
-  padding-right: 0;
+  display: grid;
+  grid-template-columns: 133px 1fr;
+  grid-template-areas:
+    "image image"
+    "title title"
+    "type price"
+    "button favor"
+    "stars rating";
+  gap: 16px 26px;
 }
 
 .housing-card-image {
-  display: block;
-  padding: 20px;
+  grid-area: image;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .housing-card-title {
-  padding-left: 20px;
+  margin: 0;
+  grid-area: title;
 }
 
-.housing-card p {
-  padding-left: 20px;
+.housing-card-type {
+  grid-area: type;
+  margin: 0;
+}
+
+.housing-card-price {
+  grid-area: price;
+  margin: 0;
+}
+
+.housing-card-button {
+  grid-area: button;
+  margin: 0;
+}
+
+.favor {
+  grid-area: favor;
+  margin: 0;
+}
+
+.housing-stars {
+  grid-area: stars;
+  margin: 0;
+}
+
+.housing-rating {
+  grid-area: rating;
+  margin: 0;
 }
 
 .housing-card-title {
@@ -422,8 +466,13 @@ body {
 
 .housing-rating {
   font-size: 16px;
-  line-height: 20px;
   text-transform: uppercase;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  line-height: 1.294;
+  padding: 9px 12px 7px;
+  margin: 0 0 0 -1rem;
+  text-align: center;
 }
 
 .main-intro {
@@ -614,6 +663,48 @@ body {
   display: block;
 }
 
+.section-range {
+  margin-left: auto;
+  margin-right: 80px;
+  width: 288px;
+}
+
+.catalog-range {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0 0;
+}
+
+.range-sign {
+  border: 2px solid;
+  box-sizing: border-box;
+  display: flex;
+  margin-right: -2px;
+  padding: 11px 15px 10px 1rem;
+  position: relative;
+  width: calc(50% + 1px);
+}
+
+.range-sign:nth-of-type(odd) {
+  border-radius: 4px 0 0 4px;
+  border-right-color: transparent;
+}
+
+.range-field {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  width: 50%;
+  font: inherit;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+}
+
+.range-price {
+  margin-left: auto;
+}
+
 .section-title {
   margin: 0;
   font-size: 30px;
@@ -643,7 +734,7 @@ body {
 
 .sorting {
   display: flex;
-  padding: 44px 72px 52px;
+  padding: 44px 72px 0;
   justify-content: space-between;
   align-items: center;
 }
