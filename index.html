@@ -10,13 +10,13 @@
 
 <body class="container">
   <header class="page-header">
-    <nav class="navigation">
-      <a class="navigation-logo-link" href="index.html">
-        <img class="navigation-logo" src="images/logo-header.svg" alt="Логотип города Седона." width="139" height="70">
-      </a>
+    <a class="navigation-logo-link" href="index.html">
+      <img class="navigation-logo" src="images/logo-header.svg" alt="Логотип города Седона." width="139" height="70">
+    </a>
+    <nav>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link">Главная</a>
+          <a class="navigation-link navigation-link-current">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седоне</a>
@@ -25,6 +25,8 @@
           <a class="navigation-link" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
+    </nav>
+    <nav>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
           <a class="navigation-user-link navigation-search" href="#">
@@ -40,7 +42,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link-button" href="#">Хочу сюда!</a>
+          <a class="button navigation-link-button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -158,14 +160,14 @@
       <p class="section-description">
         Только полезная информация и никакого спама, <br> честное бойскаутское!
       </p>
-      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label>
+      <form class="form-field subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="subscribe-name">
           <span class="visually-hidden">
             Ваш e-mail.
           </span>
           <input class="signup-subscribe" type="email" placeholder="Ваш e-mail">
         </label>
-        <button class="button button-email" type="submit">
+        <button class="button button-subscribe button-email" type="submit">
           Подписаться
         </button>
       </form>
@@ -173,38 +175,43 @@
   </main>
 
   <footer class="page-footer">
-    <section class="footer-social">
+    <section class="contacts footer-social">
       <h2 class="visually-hidden">Давайте дружить.</h2>
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="button tw" href="https://twitter.com/htmlacademy_ru">
+          <a class="social-link tw" href="https://twitter.com/htmlacademy_ru">
             <span class="visually-hidden">Twitter.</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button fb" href="https://facebook.com/htmlacademy">
+          <a class="social-link fb" href="https://facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook.</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button yt" href="https://www.youtube.com/c/HTMLAcademyRUS">
+          <a class="social-link yt" href="https://www.youtube.com/c/HTMLAcademyRUS">
             <span class="visually-hidden">Youtube.</span>
           </a>
         </li>
       </ul>
+      <a class="footer-cotacts footer-cotacts-address" href="tel:+74956660266">+7(812) 812-12-12</a>
+      <a class="footer-cotacts footer-logo-academy" href="https://htmlacademy.ru" target="_blank">
+        <img src="images/logo-htmlacademy.svg" alt="HTML Академия." width="115" height="34">
+      </a>
     </section>
-    <section class="footer-contacts">
+    <!-- <section class="contacts footer-contacts">
       <h2 class="visually-hidden">Телефон для связи.</h2>
       <address class="footer-contacts-address">
         <a class="footer-cotacts-address-phone" href="tel:+74956660266">+7(812) 812-12-12</a>
       </address>
     </section>
-    <section class="footer-logo">
+
+    <section class="contacts ooter-logo">
       <h2 class="visually-hidden">Разработчик сайта.</h2>
       <a href="https://htmlacademy.ru" target="_blank">
         <img class="footer-logo-academy" src="images/logo-htmlacademy.svg" alt="HTML Академия." width="115" height="34">
       </a>
-    </section>
+    </section> -->
   </footer>
 </body>
 </html>

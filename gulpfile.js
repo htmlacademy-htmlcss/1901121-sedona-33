@@ -11,14 +11,14 @@ const buildHTML = () => src(['source/**/*.html', '!source/**/_*.html'])
       return require('posthtml-parser')(nunjucks.renderString(require('posthtml-render')(tree), {}));
     })()
   ]))
-  .pipe(require('gulp-w3c-html-validator')())
+  // .pipe(require('gulp-w3c-html-validator')())
   .pipe(require('gulp-html-beautify')())
   .pipe(dest('.'));
 
 const buildCSS = () => src(['source/**/*.css', '!source/**/_*.css'])
   .pipe(require('gulp-postcss')([
     require('postcss-easy-import')(),
-    require('stylelint')({ fix: true }),
+    require('stylelint')(),
     require('autoprefixer')(),
     require('postcss-reporter')({
       clearAllMessages: true,
@@ -26,6 +26,15 @@ const buildCSS = () => src(['source/**/*.css', '!source/**/_*.css'])
     })
   ]))
   .pipe(dest('.'));
+
+const testBuildedCSS = () => src(['**/*.css', '!source/**/*.css', '!node_modules/**/*.css'])
+  .pipe(require('gulp-postcss')([
+    require('stylelint')({ fix: true }),
+    require('postcss-reporter')({
+      clearAllMessages: true,
+      throwError: false
+    })
+  ]));
 
 const optimizeImages = () => src('source/**/*.{svg,png,jpg}')
   .pipe(imagemin([
@@ -75,8 +84,9 @@ const startServer = () => {
   });
 
   watch('source/**/*.html', series(buildHTML, reload));
-  watch('source/**/*.css', series(buildCSS, reload));
+  watch('source/**/*.css', series(buildCSS, testBuildedCSS, reload));
   watch('source/**/*.{svg,png,jpg}', series(optimizeImages, reload));
 };
 
-exports.default = series(parallel(buildHTML, buildCSS, optimizeImages), startServer);
+exports.test = testBuildedCSS;
+exports.default = series(parallel(buildHTML, buildCSS, optimizeImages), testBuildedCSS, startServer);
