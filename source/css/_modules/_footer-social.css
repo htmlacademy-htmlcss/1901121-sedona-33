@@ -1,9 +1,31 @@
 .page-footer {
-  display: flex;
+  margin-top: auto;
+  /* display: flex;
   margin-top: auto;
   padding: 40px 72px;
-  /* vertical-align: middle; */
-  align-items: center;
+  align-items: center; */
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  padding: 25px 72px;
+  gap: 36px;
+}
+
+.footer-social-list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-social-item {
+  border-radius: 10px;
+  color: #83b3d3;
+  display: flex;
+  height: 34px;
+  margin: 10px 0 0 10px;
+  width: 34px;
 }
 
 .tw {
@@ -30,14 +52,21 @@
   height: 20px;
 }
 
-.footer-social-list {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
+.footer-cotacts {
+  font-size: 40px;
+  line-height: 1;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  padding: 15px;
 }
 
-.footer-social-item {
+.footer-logo-academy {
+  justify-self: end;
+  left: 15px;
+  position: relative;
+}
+/* .footer-social-item {
   margin-right: 30px;
   margin-bottom: 5px;
 }
@@ -69,4 +98,4 @@
   width: 200px;
   margin: 0 auto;
   text-align: right;
-}
+} */

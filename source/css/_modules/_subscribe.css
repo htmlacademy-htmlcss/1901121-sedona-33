@@ -1,5 +1,5 @@
 .subscribe {
-  padding: 90px 72px 108px;
+  padding: 0 72px 140px;
 }
 
 .subscribe-alter {
@@ -8,31 +8,57 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
+  padding-top: 92px;
+  padding-bottom: 94px;
 }
 
-.signup-subscribe {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: #f2f2f2;
+.subscribe-alter h2 {
+  margin: 0 0 30px;
 }
 
-.button-email {
-  padding: 10px;
-  border: none;
-  background-color: rgba(131, 179, 211, 1);
-  color: #ffffff;
-  border-radius: 10px;
+.form-field {
+  display: flex;
 }
 
 .subscribe-form {
-  text-align: center;
-  margin: 0;
+  margin: 0 auto;
   min-height: 60px;
+  max-width: 800px;
+}
+
+.subscribe-name {
+  flex-grow: 1;
+}
+
+.signup-subscribe {
+  padding: 16px 22px 14px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid transparent;
+  background-color: #f2f2f2;
+  width: 100%;
+  line-height: 26px;
+}
+
+.button-email {
+  background-color: rgba(131, 179, 211, 1);
+  color: #ffffff;
+  font-family: inherit;
+  min-width: 200px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.button-subscribe {
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 19px 40px 15px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .subscribe .section-title {
-  margin: 0 0 30px;
+  margin: 0 0 46px;
 }
 
 .subscribe .section-description {
