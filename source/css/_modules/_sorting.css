@@ -13,3 +13,8 @@
   border-radius: 4px;
   width: 288px;
 }
+
+.sorting-title {
+  width: 50%;
+  text-align: left;
+}

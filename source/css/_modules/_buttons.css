@@ -4,7 +4,6 @@
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
-  /* text-decoration: none; */
   text-align: center;
   background-color: #756257;
   padding: 9px 15px 8px;
@@ -21,7 +20,7 @@
   background-color: #83b3d3;
   width: 620px;
   font-size: 20px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-decoration: none;
 }
 
