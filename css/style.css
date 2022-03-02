@@ -176,7 +176,6 @@ a {
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
-  /* text-decoration: none; */
   text-align: center;
   background-color: #756257;
   padding: 9px 15px 8px;
@@ -193,7 +192,7 @@ a {
   background-color: #83b3d3;
   width: 620px;
   font-size: 20px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-decoration: none;
 }
 
@@ -451,8 +450,9 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px 18px;
-  margin: 0;
-  padding: 54px 72px 34px;
+  margin: 0 72px;
+  padding: 54px 0 34px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .housing-card {
@@ -538,7 +538,7 @@ a {
   text-align: center;
   padding: 9px;
   border-radius: 4px;
-  width: 132px;
+  /* width: 132px; */
   grid-area: favor;
   margin: 0;
 }
@@ -580,8 +580,6 @@ a {
   padding-top: 51px;
 }
 
-/* варианты отображения результатов на странице */
-
 .mode-list {
   display: grid;
   gap: 8px;
@@ -589,14 +587,6 @@ a {
   margin: 0 0 0 auto;
   list-style-type: none;
   padding: 0;
-  /* list-style-type: none;
-  width: 160px;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  background-color: transparent;
-  background-image: url("../images/button-list.svg"); */
 }
 
 .mode-item {
@@ -605,7 +595,6 @@ a {
   width: 44px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  position: relative;
 }
 
 .mode-item-kind:checked + .mode-item {
@@ -613,51 +602,27 @@ a {
 }
 
 .mode-tile::after {
-  background-image: url("../images/tile.svg");
+  -webkit-mask-image: url("../images/tile.svg");
+          mask-image: url("../images/tile.svg");
 }
 
 .mode-item::after {
   background-color: currentColor;
   content: "";
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
   margin: auto;
-  position: absolute;
 }
 
 .mode-slideshow::after {
-  background-image: url("../images/slideshow.svg");
+  -webkit-mask-image: url("../images/slideshow.svg");
+          mask-image: url("../images/slideshow.svg");
 }
 
 .mode-schedule::after {
-  background-image: url("../images/schedule.svg");
+  -webkit-mask-image: url("../images/schedule.svg");
+          mask-image: url("../images/schedule.svg");
 }
-
-/* .mode-item {
-  margin-right: 8px;
-}
-
-.mode-item:last-child {
-  margin-right: 0;
-}
-
-.mode {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #ffffff;
-  border: 2px solid #e5e5e5;
-}
-
-.mode-tile {
-  background-color: transparent;
-  background-image: url("../images/button-light.svg");
-  border: 2px solid #000000;
-}
-
-.mode-slideshow {
-  background-color: transparent;
-  background-image: url("../images/button-table.svg");
-} */
 
 .page-header {
   display: grid;
@@ -755,11 +720,12 @@ a {
 
 .pagination {
   display: flex;
-  padding: 0 72px 72px;
-  margin: 0;
+  padding: 30px 0 72px;
+  margin: 0 72px;
   align-items: center;
   margin-top: 30px;
   text-align: center;
+  border-top: 1px solid #e6e6e6;
 }
 
 .pagination-list {
@@ -902,6 +868,11 @@ a {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   width: 288px;
+}
+
+.sorting-title {
+  width: 50%;
+  text-align: left;
 }
 
 .subscribe {

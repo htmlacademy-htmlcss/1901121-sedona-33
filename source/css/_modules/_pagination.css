@@ -1,10 +1,11 @@
 .pagination {
   display: flex;
-  padding: 0 72px 72px;
-  margin: 0;
+  padding: 30px 0 72px;
+  margin: 0 72px;
   align-items: center;
   margin-top: 30px;
   text-align: center;
+  border-top: 1px solid #e6e6e6;
 }
 
 .pagination-list {
