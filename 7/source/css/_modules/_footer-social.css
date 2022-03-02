@@ -1,0 +1,101 @@
+.page-footer {
+  margin-top: auto;
+  /* display: flex;
+  margin-top: auto;
+  padding: 40px 72px;
+  align-items: center; */
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  padding: 25px 72px;
+  gap: 36px;
+}
+
+.footer-social-list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-social-item {
+  border-radius: 10px;
+  color: #83b3d3;
+  display: flex;
+  height: 34px;
+  margin: 10px 0 0 10px;
+  width: 34px;
+}
+
+.tw {
+  background-color: transparent;
+  background-image: url("../images/social-twitter.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.fb {
+  background-color: transparent;
+  background-image: url("../images/social-facebook.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.yt {
+  background-color: transparent;
+  background-image: url("../images/social-youtube.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.footer-cotacts {
+  font-size: 40px;
+  line-height: 1;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  padding: 15px;
+}
+
+.footer-logo-academy {
+  justify-self: end;
+  left: 15px;
+  position: relative;
+}
+/* .footer-social-item {
+  margin-right: 30px;
+  margin-bottom: 5px;
+}
+
+.footer-social {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.footer-contacts {
+  width: 620px;
+}
+
+.footer-contacts-address {
+  margin: 0;
+  text-align: center;
+}
+
+.footer-cotacts-address-phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-logo {
+  width: 200px;
+  margin: 0 auto;
+  text-align: right;
+} */
