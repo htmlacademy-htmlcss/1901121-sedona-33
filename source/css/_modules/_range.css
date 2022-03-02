@@ -1,0 +1,47 @@
+.catalog-filter-range {
+  margin-left: auto;
+  margin-right: 80px;
+  width: 288px;
+}
+
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0 0;
+}
+
+.range-sign {
+  border: 2px solid;
+  box-sizing: border-box;
+  display: flex;
+  margin-right: -2px;
+  padding: 11px 15px 10px 1rem;
+  position: relative;
+  width: calc(50% + 1px);
+}
+
+.range-sign:nth-of-type(odd) {
+  border-radius: 4px 0 0 4px;
+  border-right-color: transparent;
+}
+
+.range-field {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  width: 50%;
+  font: inherit;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  appearance: textfield;
+}
+
+.range-price {
+  margin-left: auto;
+}
+
+.range-field::-webkit-outer-spin-button,
+.range-field::-webkit-inner-spin-button {
+  appearance: none;
+}

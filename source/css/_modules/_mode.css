@@ -1,17 +1,57 @@
 /* варианты отображения результатов на странице */
 
 .mode-list {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 48px 48px 48px;
+  margin: 0 0 0 auto;
   list-style-type: none;
+  padding: 0;
+  /* list-style-type: none;
   width: 160px;
   margin: 0;
   display: flex;
   justify-content: space-between;
   padding: 0;
   background-color: transparent;
-  background-image: url("../images/button-list.svg");
+  background-image: url("../images/button-list.svg"); */
 }
 
 .mode-item {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  position: relative;
+}
+
+.mode-item-kind:checked + .mode-item {
+  border-color: currentColor;
+}
+
+.mode-tile::after {
+  background-image: url("../images/tile.svg");
+}
+
+.mode-item::after {
+  background-color: currentColor;
+  content: "";
+  height: 16px;
+  width: 16px;
+  margin: auto;
+  position: absolute;
+}
+
+.mode-slideshow::after {
+  background-image: url("../images/slideshow.svg");
+}
+
+.mode-schedule::after {
+  background-image: url("../images/schedule.svg");
+}
+
+/* .mode-item {
   margin-right: 8px;
 }
 
@@ -35,4 +75,4 @@
 .mode-slideshow {
   background-color: transparent;
   background-image: url("../images/button-table.svg");
-}
+} */

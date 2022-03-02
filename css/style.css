@@ -137,7 +137,6 @@ a {
 .breadcrumbs-link {
   border-radius: 4px;
   text-decoration: none;
-  padding: 0 6px;
 }
 
 .breadcrumbs-item {
@@ -154,7 +153,21 @@ a {
   justify-content: center;
   position: relative;
   width: 22px;
-  height: 21px;
+  height: 20px;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  background-image: url("../images/arrow-right.svg");
+  width: 5px;
+  height: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .button {
@@ -181,6 +194,7 @@ a {
   width: 620px;
   font-size: 20px;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 /* кнопка поиска гостиницы */
@@ -270,8 +284,34 @@ a {
   padding: 0;
 }
 
-.control-input {
+.control {
+  position: relative;
+  padding-left: 40px;
   line-height: 23px;
+}
+
+.control::after {
+  position: absolute;
+  background-image: url("../images/checkbox.svg");
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+}
+
+.control::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
+  content: "";
+}
+
+.control-input:checked + .control::after {
+  content: "";
 }
 
 .catalog-filter-list {
@@ -290,48 +330,12 @@ a {
   min-width: 300px;
 }
 
-/* диапазон */
-
-.catalog-filter-range {
-  margin-left: auto;
-  margin-right: 80px;
-  width: 288px;
+.control-radio::after {
+  background-image: url("../images/radio.svg");
 }
 
-.range {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5px 0 0;
-}
-
-.range-sign {
-  border: 2px solid;
-  box-sizing: border-box;
-  display: flex;
-  margin-right: -2px;
-  padding: 11px 15px 10px 1rem;
-  position: relative;
-  width: calc(50% + 1px);
-}
-
-.range-sign:nth-of-type(odd) {
-  border-radius: 4px 0 0 4px;
-  border-right-color: transparent;
-}
-
-.range-field {
-  background-color: transparent;
-  padding: 0;
-  color: inherit;
-  width: 50%;
-  font: inherit;
-  box-sizing: border-box;
-  border: none;
-  box-shadow: none;
-}
-
-.range-price {
-  margin-left: auto;
+.control-radio::before {
+  border-radius: 50%;
 }
 
 .container {
@@ -579,17 +583,57 @@ a {
 /* варианты отображения результатов на странице */
 
 .mode-list {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 48px 48px 48px;
+  margin: 0 0 0 auto;
   list-style-type: none;
+  padding: 0;
+  /* list-style-type: none;
   width: 160px;
   margin: 0;
   display: flex;
   justify-content: space-between;
   padding: 0;
   background-color: transparent;
-  background-image: url("../images/button-list.svg");
+  background-image: url("../images/button-list.svg"); */
 }
 
 .mode-item {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  position: relative;
+}
+
+.mode-item-kind:checked + .mode-item {
+  border-color: currentColor;
+}
+
+.mode-tile::after {
+  background-image: url("../images/tile.svg");
+}
+
+.mode-item::after {
+  background-color: currentColor;
+  content: "";
+  height: 16px;
+  width: 16px;
+  margin: auto;
+  position: absolute;
+}
+
+.mode-slideshow::after {
+  background-image: url("../images/slideshow.svg");
+}
+
+.mode-schedule::after {
+  background-image: url("../images/schedule.svg");
+}
+
+/* .mode-item {
   margin-right: 8px;
 }
 
@@ -613,7 +657,7 @@ a {
 .mode-slideshow {
   background-color: transparent;
   background-image: url("../images/button-table.svg");
-}
+} */
 
 .page-header {
   display: grid;
@@ -665,7 +709,6 @@ a {
   display: flex;
   width: 37px;
   height: 37px;
-  border-radius: 10px;
   margin: 0 0 14px 5px;
   text-decoration: none;
   position: relative;
@@ -732,7 +775,7 @@ a {
   box-sizing: border-box;
   width: 55px;
   height: 55px;
-  padding: 14px 20px;
+  padding: 14px 15px 16px;
   color: #ffffff;
   background-color: #83b3d3;
   text-decoration: none;
@@ -764,6 +807,57 @@ a {
 
 .pic-item {
   display: block;
+}
+
+.catalog-filter-range {
+  margin-left: auto;
+  margin-right: 80px;
+  width: 288px;
+}
+
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0 0;
+}
+
+.range-sign {
+  border: 2px solid;
+  box-sizing: border-box;
+  display: flex;
+  margin-right: -2px;
+  padding: 11px 15px 10px 1rem;
+  position: relative;
+  width: calc(50% + 1px);
+}
+
+.range-sign:nth-of-type(odd) {
+  border-radius: 4px 0 0 4px;
+  border-right-color: transparent;
+}
+
+.range-field {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  width: 50%;
+  font: inherit;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.range-price {
+  margin-left: auto;
+}
+
+.range-field::-webkit-outer-spin-button,
+.range-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .section-title {

@@ -17,13 +17,13 @@
     <nav>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" {% block href_main %}href="index.html" {% endblock %}>Главная</a>
+          <a class="navigation-link {{ 'navigation-link-current' if page == 'index' }}" {% block href_main %}href="index.html" {% endblock %}>Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" {% block href_catalog %}href="catalog.html" {% endblock %}>Гостиницы</a>
+          <a class="navigation-link {{ 'navigation-link-current' if page == 'catalog' }}" {% block href_catalog %}href="catalog.html" {% endblock %}>Гостиницы</a>
         </li>
       </ul>
     </nav>
