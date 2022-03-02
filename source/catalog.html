@@ -1,4 +1,6 @@
 {% extends "_layout.html" %}
+
+{% set page = 'catalog' %}
 {% block title %}Седона: Каталог{% endblock %}
 
 {% block href_catalog %}{% endblock %}
@@ -25,20 +27,20 @@
         <legend class="catalog-filter-title">Инфраструктура</legend>
         <ul class="catalog-filter-list">
           <li class="catalog-filter-item">
-            <label class="control">
-              <input class="control-input" type="checkbox" name="features[]" value="swimmpool" checked>
+            <input class="control-input visually-hidden" type="checkbox" name="features[]" value="swimmpool" id="swimmpool" checked>
+            <label class="control" for="swimmpool">
               Бассейн
             </label>
           </li>
           <li class="catalog-filter-item">
-            <label class="control">
-              <input class="control-input" type="checkbox" name="features[]" value="parking" checked>
+            <input class="control-input visually-hidden" type="checkbox" name="features[]" value="parking" id="parking" checked>
+            <label class="control" for="parking">
               Парковка
             </label>
           </li>
           <li class="catalog-filter-item">
-            <label class="control">
-              <input class="control-input" type="checkbox" name="features[]" value="wifi">
+            <input class="control-input visually-hidden" type="checkbox" name="features[]" value="wifi" id="wifi">
+            <label class="control" for="wifi">
               Wi-Fi
             </label>
           </li>
@@ -49,20 +51,20 @@
         <legend class="catalog-filter-title">Тип жилья</legend>
         <ul class="catalog-filter-list">
           <li class="catalog-filter-item">
-            <label class="control">
-              <input class="control-input" type="radio" name="hotel" checked>
+            <input class="control-input visually-hidden" type="radio" name="radio" id="hotel" value="hotel" checked>
+            <label class="control control-radio" for="hotel">
               Гостиница
             </label>
           </li>
           <li class="catalog-filter-item">
-            <label class="control">
-              <input class="control-input" type="radio" name="motel">
+            <input class="control-input visually-hidden" type="radio" name="radio" id="motel" value="motel">
+            <label class="control control-radio" for="motel">
               Мотель
             </label>
           </li>
           <li class="catalog-filter-item">
-            <label class="control">
-              <input class="control-input" type="radio" name="apartments">
+            <input class="control-input visually-hidden" type="radio" name="radio" id="apart" value="apart">
+            <label class="control control-radio" for="apart">
               Апартаменты
             </label>
           </li>
@@ -103,20 +105,23 @@
   </select>
 
   <ul class="mode-list">
-    <li class="mode-item">
-      <a class="mode mode-tile" href="#">
+    <li>
+      <input class="mode-item-kind visually-hidden" id="type-tile" name="mode" type="radio" value="tile" checked>
+      <label class="mode-item mode-tile" for="type-tile">
         <span class="visually-hidden">Плитка.</span>
-      </a>
+      </label>
     </li>
-    <li class="mode-item">
-      <a class="mode mode-slideshow" href="#">
+    <li>
+      <input class="mode-item-kind visually-hidden" id="type-slideshow" name="mode" type="radio" value="slideshow">
+      <label class="mode-item mode-slideshow" for="type-slideshow">
         <span class="visually-hidden">Слайдшоу.</span>
-      </a>
+      </label>
     </li>
-    <li class="mode-item">
-      <a class="mode mode-list" href="#">
+    <li>
+      <input class="mode-item-kind visually-hidden" id="type-schedule" name="mode" type="radio" value="schedule">
+      <label class="mode-item mode-schedule" for="type-schedule">
         <span class="visually-hidden">Список.</span>
-      </a>
+      </label>
     </li>
   </ul>
 </div>
