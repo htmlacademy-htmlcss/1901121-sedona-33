@@ -90,6 +90,12 @@
   min-width: 300px;
 }
 
+.catalog-filter-buttons {
+  width: 160px;
+  margin: auto 0 32px;
+  text-align: center;
+}
+
 .control-radio::after {
   background-image: url("../images/radio.svg");
 }

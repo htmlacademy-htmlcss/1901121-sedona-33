@@ -35,6 +35,10 @@
   align-self: center;
 }
 
+.housing-stars-5 {
+  width: 118px;
+}
+
 .housing-stars-4 {
   width: 94px;
 }
@@ -87,11 +91,10 @@
   text-align: center;
   padding: 9px;
   border-radius: 4px;
-  /* width: 132px; */
   grid-area: favor;
   margin: 0;
 }
 
-.favor-Active {
+.favor-active {
   background-color: #7db54f;
 }

@@ -11,8 +11,8 @@
   border: none;
   font-family: inherit;
   box-sizing: border-box;
+  text-decoration: none;
 }
-
 
 /* кнопка загрузки */
 .button-load {
@@ -42,12 +42,6 @@
 }
 
 /* кнопки фильтра */
-.catalog-filter-buttons {
-  width: 160px;
-  margin: auto 0 32px;
-  text-align: center;
-}
-
 .button-apply {
   background-color: #83b3d3;
   padding: 13px 15px 15px;
