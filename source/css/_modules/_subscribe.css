@@ -39,22 +39,15 @@
   line-height: 26px;
 }
 
-.button-email {
-  background-color: rgba(131, 179, 211, 1);
-  color: #ffffff;
-  font-family: inherit;
-  min-width: 200px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 .button-subscribe {
   border-radius: 10px;
   font-size: 20px;
   line-height: 26px;
-  padding: 19px 40px 15px;
+  padding: 19px auto 15px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+  background-color: rgba(131, 179, 211, 1);
+  min-width: 200px;
 }
 
 .subscribe .section-title {
