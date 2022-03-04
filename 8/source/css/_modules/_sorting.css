@@ -1,0 +1,20 @@
+.sorting {
+  display: flex;
+  padding: 44px 72px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* выпадашка */
+.select-control {
+  font-size: 18px;
+  padding: 5px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  width: 288px;
+}
+
+.sorting-title {
+  width: 50%;
+  text-align: left;
+}
