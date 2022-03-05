@@ -3,7 +3,7 @@
 }
 
 .subscribe-alter {
-  background-color: rgb(131, 179, 211);
+  background-color: #83b3d3;
   background-image: url("../images/background-email.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -43,11 +43,14 @@
   border-radius: 10px;
   font-size: 20px;
   line-height: 26px;
-  padding: 19px auto 15px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  background-color: rgba(131, 179, 211, 1);
+  background-color: #83b3d3;
   min-width: 200px;
+}
+
+.button-subscribe:hover {
+  background-color: #68a2ca;
 }
 
 .subscribe .section-title {
