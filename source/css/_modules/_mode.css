@@ -15,6 +15,10 @@
   border-radius: 4px;
 }
 
+.mode-item:hover {
+  border-color: #83b3d3;
+}
+
 .mode-item-kind:checked + .mode-item {
   border-color: currentColor;
 }

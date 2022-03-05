@@ -182,6 +182,10 @@ body {
   text-decoration: none;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
 /* кнопка загрузки */
 
 .button-load {
@@ -191,6 +195,12 @@ body {
   font-size: 20px;
   margin: 30px auto;
   text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.button-load:hover {
+  background-color: #68a2ca;
 }
 
 /* кнопка поиска гостиницы */
@@ -211,11 +221,19 @@ body {
   border-radius: 10px;
 }
 
+.find-hotel-button:hover {
+  background-color: #615048;
+}
+
 /* кнопки фильтра */
 
 .button-apply {
   background-color: #83b3d3;
   padding: 13px 15px 15px;
+}
+
+.button-apply:hover {
+  background-color: #68a2ca;
 }
 
 .button-reset {
@@ -278,6 +296,10 @@ body {
   position: relative;
   padding-left: 40px;
   line-height: 23px;
+}
+
+.control-input:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .control::after {
@@ -349,6 +371,7 @@ body {
   grid-template-columns: 1fr auto 1fr;
   padding: 25px 72px;
   gap: 36px;
+  align-items: center;
 }
 
 .footer-social-list {
@@ -357,7 +380,7 @@ body {
   padding: 0;
 }
 
-.footer-social-item {
+.social-link {
   border-radius: 10px;
   color: #83b3d3;
   display: flex;
@@ -366,28 +389,27 @@ body {
   width: 34px;
 }
 
-.tw {
-  background-color: transparent;
-  background-image: url("../images/social-twitter.svg");
-  background-repeat: no-repeat;
-  width: 20px;
+.social-link::before {
+  background-color: currentColor;
+  content: "";
   height: 20px;
+  margin: auto;
+  width: 20px;
 }
 
-.fb {
-  background-color: transparent;
-  background-image: url("../images/social-facebook.svg");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+.tw::before {
+  -webkit-mask-image: url("../images/social-twitter.svg");
+          mask-image: url("../images/social-twitter.svg");
 }
 
-.yt {
-  background-color: transparent;
-  background-image: url("../images/social-youtube.svg");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+.fb::before {
+  -webkit-mask-image: url("../images/social-facebook.svg");
+          mask-image: url("../images/social-facebook.svg");
+}
+
+.yt::before {
+  -webkit-mask-image: url("../images/social-youtube.svg");
+          mask-image: url("../images/social-youtube.svg");
 }
 
 .footer-cotacts {
@@ -505,8 +527,16 @@ body {
   margin: 0;
 }
 
+.favor:hover {
+  background-color: #68a2ca;
+}
+
 .favor-active {
   background-color: #7db54f;
+}
+
+.favor-active:hover {
+  background-color: #6c9e42;
 }
 
 .housing-card-type,
@@ -557,6 +587,10 @@ body {
   width: 44px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+
+.mode-item:hover {
+  border-color: #83b3d3;
 }
 
 .mode-item-kind:checked + .mode-item {
@@ -619,6 +653,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.navigation-link:hover {
+  color: #756257;
+}
+
 .navigation-link-current {
   border-bottom-color: #756257;
 }
@@ -640,6 +678,18 @@ body {
   text-decoration: none;
   position: relative;
   color: inherit;
+}
+
+.navigation-user-link.navigation-search::before {
+  content: "";
+  background-color: currentColor;
+  height: 20px;
+  margin: auto;
+  width: 20px;
+}
+
+.navigation-user-link:hover {
+  color: #756257;
 }
 
 .navigation-link-button {
@@ -713,6 +763,10 @@ body {
   border-radius: 4px;
 }
 
+.pagination-link:hover:not(.pagination-active) {
+  background-color: #68a2ca;
+}
+
 .pagination-item {
   margin: 8px 0 0 8px;
 }
@@ -729,8 +783,13 @@ body {
 .count-pages select {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 5px;
+  padding: 10px 50px 12px 18px;
+  min-width: 160px;
   font-size: inherit;
+}
+
+.count-pages-title {
+  margin-right: 50px;;
 }
 
 .pic-item {
@@ -757,6 +816,10 @@ body {
   padding: 11px 15px 10px 1rem;
   position: relative;
   width: calc(50% + 1px);
+}
+
+.range-sign:hover {
+  border-color: #ffffff;
 }
 
 .range-sign:nth-of-type(odd) {
@@ -830,6 +893,11 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   width: 288px;
+  height: 48px;
+}
+
+.select-control:hover {
+  border-color: #83b3d3;
 }
 
 .sorting-title {
@@ -842,7 +910,7 @@ body {
 }
 
 .subscribe-alter {
-  background-color: rgb(131, 179, 211);
+  background-color: #83b3d3;
   background-image: url("../images/background-email.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -882,11 +950,14 @@ body {
   border-radius: 10px;
   font-size: 20px;
   line-height: 26px;
-  padding: 19px auto 15px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  background-color: rgba(131, 179, 211, 1);
+  background-color: #83b3d3;
   min-width: 200px;
+}
+
+.button-subscribe:hover {
+  background-color: #68a2ca;
 }
 
 .subscribe .section-title {

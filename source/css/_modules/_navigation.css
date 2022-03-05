@@ -31,6 +31,10 @@
   background-repeat: no-repeat;
 }
 
+.navigation-link:hover {
+  color: #756257;
+}
+
 .navigation-link-current {
   border-bottom-color: #756257;
 }
@@ -52,6 +56,18 @@
   text-decoration: none;
   position: relative;
   color: inherit;
+}
+
+.navigation-user-link.navigation-search::before {
+  content: "";
+  background-color: currentColor;
+  height: 20px;
+  margin: auto;
+  width: 20px;
+}
+
+.navigation-user-link:hover {
+  color: #756257;
 }
 
 .navigation-link-button {

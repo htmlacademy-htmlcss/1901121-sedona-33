@@ -95,6 +95,14 @@
   margin: 0;
 }
 
+.favor:hover {
+  background-color: #68a2ca;
+}
+
 .favor-active {
   background-color: #7db54f;
+}
+
+.favor-active:hover {
+  background-color: #6c9e42;
 }

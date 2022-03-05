@@ -31,6 +31,10 @@
   border-radius: 4px;
 }
 
+.pagination-link:hover:not(.pagination-active) {
+  background-color: #68a2ca;
+}
+
 .pagination-item {
   margin: 8px 0 0 8px;
 }
@@ -47,6 +51,11 @@
 .count-pages select {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 5px;
+  padding: 10px 50px 12px 18px;
+  min-width: 160px;
   font-size: inherit;
+}
+
+.count-pages-title {
+  margin-right: 50px;;
 }

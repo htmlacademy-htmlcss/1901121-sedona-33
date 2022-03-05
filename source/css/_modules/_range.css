@@ -20,6 +20,10 @@
   width: calc(50% + 1px);
 }
 
+.range-sign:hover {
+  border-color: #ffffff;
+}
+
 .range-sign:nth-of-type(odd) {
   border-radius: 4px 0 0 4px;
   border-right-color: transparent;
