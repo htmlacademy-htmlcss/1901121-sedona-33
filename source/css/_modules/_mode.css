@@ -19,6 +19,10 @@
   border-color: #83b3d3;
 }
 
+.mode-item-kind:focus-visible + .mode-item {
+  border-color: #83b3d3;
+}
+
 .mode-item-kind:checked + .mode-item {
   border-color: currentColor;
 }

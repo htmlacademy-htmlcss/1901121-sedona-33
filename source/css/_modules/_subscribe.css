@@ -39,6 +39,20 @@
   line-height: 26px;
 }
 
+.signup-subscribe:hover {
+  background-color: #e6e6e6;
+}
+
+.signup-subscribe:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+  box-sizing: border-box;
+}
+
+.signup-subscribe:invalid {
+  outline: 2px solid #ff5757;
+}
+
 .button-subscribe {
   border-radius: 10px;
   font-size: 20px;
@@ -51,6 +65,10 @@
 
 .button-subscribe:hover {
   background-color: #68a2ca;
+}
+
+.button-subscribe:focus-visible {
+  outline: 3px solid #756257;
 }
 
 .subscribe .section-title {

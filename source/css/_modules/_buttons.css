@@ -18,6 +18,14 @@
   background-color: #615048;
 }
 
+.button:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* кнопка загрузки */
 .button-load {
   display: block;
@@ -55,20 +63,49 @@
   background-color: #615048;
 }
 
+.find-hotel-button:focus-visible {
+  background-color: #615048;
+  outline: 3px solid #83b3d3;
+}
+
+.find-hotel-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* кнопки фильтра */
 .button-apply {
   background-color: #83b3d3;
   padding: 13px 15px 15px;
+  width: 100%;
 }
 
 .button-apply:hover {
   background-color: #68a2ca;
 }
 
+.button-apply:focus-visible {
+  outline: 3px solid #ffffff;
+}
+
 .button-reset {
   background-color: transparent;
   font: inherit;
-  margin: 17px 0 3px;
-  padding: 1px 12px 2px;
+  margin: 20px 0 0;
+  padding: 0 10px;
   text-transform: capitalize;
+  border: none;
+  color: inherit;
+  border-radius: 4px;
+}
+
+.button-reset:hover {
+  opacity: 0.6;
+}
+
+.button-reset:focus-visible {
+  outline: 2px solid #83b3d3;
+}
+
+.button-reset:active {
+  opacity: 0.3;
 }

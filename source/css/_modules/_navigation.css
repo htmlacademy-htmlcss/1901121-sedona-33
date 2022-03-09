@@ -35,6 +35,10 @@
   color: #756257;
 }
 
+.navigation-link:active {
+  color: rgba(117, 98, 87, 0.3);
+}
+
 .navigation-link-current {
   border-bottom-color: #756257;
 }
@@ -58,7 +62,7 @@
   color: inherit;
 }
 
-.navigation-user-link.navigation-search::before {
+.navigation-user-link::before {
   content: "";
   background-color: currentColor;
   height: 20px;
@@ -70,6 +74,10 @@
   color: #756257;
 }
 
+.navigation-user-link:active {
+  color: rgba(117, 98, 87, 0.3);
+}
+
 .navigation-link-button {
   display: block;
   margin: 0 0 14px 22px;
@@ -77,20 +85,12 @@
   text-decoration: none;
 }
 
-.navigation-search {
-  background-image: url("../images/search.svg");
-  background-repeat: no-repeat;
-  display: block;
-  width: 20px;
-  height: 20px;
+.navigation-search::before {
+  mask-image: url("../images/search.svg");
 }
 
-.navigation-fav {
-  background-image: url("../images/fav.svg");
-  background-repeat: no-repeat;
-  display: block;
-  width: 20px;
-  height: 20px;
+.navigation-fav::before {
+  mask-image: url("../images/fav.svg");
 }
 
 .navigation-fav-count {
@@ -103,7 +103,11 @@
   padding: 3px 4px 4px;
   position: absolute;
   text-align: center;
-  top: -10px;
-  right: -8px;
+  top: 0;
+  right: -5px;
   transition: inherit;
+}
+
+.navigation-user-link .navigation-fav-count:active {
+  color: hsla(0, 0%, 100%, 0.3);
 }
