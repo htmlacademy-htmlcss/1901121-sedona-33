@@ -100,6 +100,15 @@
       </a>
     </section>
   </footer>
+
+  {% if isDev %}
+    <script>
+      window.pinegladePP = {
+        breakpoints: [1200]
+      };
+    </script>
+    <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
+  {% endif %}
 </body>
 
 </html>

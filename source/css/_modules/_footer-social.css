@@ -25,6 +25,20 @@
   width: 34px;
 }
 
+.social-link:hover {
+  color: #68a2ca;
+}
+
+.social-link:focus-visible {
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+  color: #68a2ca;
+}
+
+.social-link:active {
+  opacity: 0.3;
+}
+
 .social-link::before {
   background-color: currentColor;
   content: "";
@@ -52,6 +66,24 @@
   color: inherit;
   font-family: inherit;
   padding: 15px;
+}
+
+.footer-cotacts:hover {
+  color: #756257;
+}
+
+.footer-cotacts:focus {
+  color: #756257;
+}
+
+.footer-cotacts:focus-visible {
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+  color: #756257;
+}
+
+.footer-cotacts:active {
+  opacity: 0.3;
 }
 
 .footer-logo-academy {

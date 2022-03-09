@@ -97,6 +97,16 @@
 
 .favor:hover {
   background-color: #68a2ca;
+  outline: 1px solid #756257;
+}
+
+.favor:focus-visible {
+  outline: 3px solid #756257;
+}
+
+.favor:active {
+  outline: 1px solid #756257;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .favor-active {
@@ -105,4 +115,9 @@
 
 .favor-active:hover {
   background-color: #6c9e42;
+}
+
+.favor-active:active {
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
 }

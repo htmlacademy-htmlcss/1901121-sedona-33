@@ -14,3 +14,15 @@
   text-align: center;
   grid-area: rating;
 }
+
+.housing-card-image:hover {
+  opacity: 0.6;
+}
+
+.housing-card-image:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.housing-card-image:active {
+  opacity: 0.3;
+}
