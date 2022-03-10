@@ -51,13 +51,6 @@
   width: 46px;
 }
 
-.housing-card-image {
-  grid-area: image;
-  margin: 0;
-  margin-bottom: -1px;
-  width: 300px;
-}
-
 .housing-card-title {
   margin: 0;
   grid-area: title;

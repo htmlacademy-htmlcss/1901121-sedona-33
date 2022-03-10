@@ -6,13 +6,47 @@
 }
 
 /* выпадашка */
-.select-control {
+/* .select-control {
   font-size: 18px;
   padding: 5px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   width: 288px;
   height: 48px;
+} */
+
+.select {
+  position: relative;
+}
+
+.result-sort {
+  display: block;
+  width: 16rem;
+}
+
+.select-control {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #333333;
+  font-size: 18px;
+  line-height: 23px;
+  outline: none;
+  padding: 9px 50px 12px 18px;
+  width: 100%;
+}
+
+.select::after {
+  background-color: rgba(0,0,0,.3);
+  content: "";
+  height: 20px;
+  mask-image: url("../images/arrow-down.svg");
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  width: 20px;
 }
 
 .select-control:hover {

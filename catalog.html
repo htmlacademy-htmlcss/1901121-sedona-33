@@ -121,6 +121,25 @@
                 <input class="range-field" type="number" name="max-price" min="0" max="11100" step="100" value="9000">
                 <span class="range-price">до</span>
               </label>
+              <div class="range-slider-target range-slider-ltr range-slider-horizontal range-slider-txt-dir-ltr">
+                <div class="range-slider-base">
+                  <div class="range-slider-connects">
+                    <div class="range-slider-connect" style="transform: translate(0%, 0px) scale(1, 1);">
+                    </div>
+                  </div>
+                  <div class="range-slider-origin" style="transform: translate(-100%, 0px); z-index: 5;">
+                    <div class="range-slider-handle range-slider-handle-lower" data-handle="0" tabindex="0" aria-label="Меньше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="0.0" aria-valuetext="0.00">
+                      <div class="range-slider-touch-area"></div>
+                    </div>
+                  </div>
+                  <div class="range-slider-origin" style="transform: translate(0%, 0px); z-index: 4;">
+                    <div class="range-slider-handle range-slider-handle-upper" data-handle="1" tabindex="0" aria-label="Больше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="11100.0" aria-valuetext="11100.00">
+                      <div class="range-slider-touch-area">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </fieldset>
           <div class="catalog-filter-buttons">
@@ -134,11 +153,19 @@
       <h2 class="section-title sorting-title">
         Найдено гостиниц: 38
       </h2>
-      <select class="select-control" aria-label="Сортировка">
-        <option value="popular">Сначала дешёвые</option>
-        <option value="cheap">Сначала дорогое</option>
-        <option value="expensive">Сначала популярное</option>
-      </select>
+      <label aria-label="Сортировка.">
+        <span class="result-sort select">
+          <select class="select-control" name="sorting-dir" data-submit="">
+            <option value="price-up">Сначала дешёвые</option>
+            <option value="price-down">Сначала дорогие</option>
+          </select>
+        </span>
+      </label>
+      <!-- <select class="select-control" aria-label="Сортировка">
+    <option value="popular">Сначала дешёвые</option>
+    <option value="cheap">Сначала дорогое</option>
+    <option value="expensive">Сначала популярное</option>
+  </select> -->
       <ul class="mode-list">
         <li>
           <input class="mode-item-kind visually-hidden" id="type-tile" name="mode" type="radio" value="tile" checked="">
