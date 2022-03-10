@@ -120,11 +120,6 @@
       </select>
     </span>
   </label>
-  <!-- <select class="select-control" aria-label="Сортировка">
-    <option value="popular">Сначала дешёвые</option>
-    <option value="cheap">Сначала дорогое</option>
-    <option value="expensive">Сначала популярное</option>
-  </select> -->
 
   <ul class="mode-list">
     <li>
@@ -223,11 +218,17 @@
     </li>
   </ul>
   <form class="count-pages" action="https://echo.htmlacademy.ru" method="get">
-    <label>
-      <span class="count-pages-title">Гостиниц на странице:</span>
+    <label class="result-limit">
+      <p class="result-page-title">Гостиниц на странице:</p>
+      <span class="result-limit-list select">
       <select class="select-control" name="housing-count">
         <option selected>4</option>
       </select>
+    </span>
+      <!-- <span class="count-pages-title">Гостиниц на странице:</span>
+      <select class="select-control" name="housing-count">
+        <option selected>4</option>
+      </select> -->
     </label>
   </form>
 </div>
