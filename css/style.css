@@ -907,7 +907,7 @@ body {
 
 .pagination {
   display: flex;
-  padding: 33px 0 72px;
+  padding: 33px 0 71px;
   margin: 0 72px;
   align-items: center;
   text-align: center;
@@ -983,8 +983,25 @@ body {
   font-size: inherit;
 }
 
-.count-pages-title {
+/* .count-pages-title {
   margin-right: 47px;
+} */
+
+.result-limit {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.result-limit-list {
+  display: block;
+  margin-left: 50px;
+  width: 160px;
+}
+
+.result-page-title {
+  padding-right: 2px;
 }
 
 .pic-item {
@@ -1233,7 +1250,7 @@ body {
 }
 
 .subscribe {
-  padding: 0 72px 142px;
+  padding: 0 72px 141px;
 }
 
 .subscribe .section-title {
