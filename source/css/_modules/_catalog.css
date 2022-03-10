@@ -9,14 +9,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
-  padding: 54px 72px 86px;
+  padding: 36px 72px 51px;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 1.294;
   font-weight: 700;
-  margin: 0 0 4px;
+  margin: 0;
 }
 
 /* фильтр */
@@ -106,10 +106,6 @@
   min-width: 180px;
   border: none;
   padding: 0;
-}
-
-.catalog-filter-group:last-of-type {
-  min-width: 300px;
 }
 
 .catalog-filter-buttons {

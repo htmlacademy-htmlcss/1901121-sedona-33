@@ -108,6 +108,6 @@
   transition: inherit;
 }
 
-.navigation-user-link .navigation-fav-count:active {
+.navigation-user-link:active .navigation-fav-count {
   color: hsla(0, 0%, 100%, 0.3);
 }

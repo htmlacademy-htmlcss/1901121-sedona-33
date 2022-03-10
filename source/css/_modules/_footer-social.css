@@ -14,6 +14,7 @@
   list-style-type: none;
   display: flex;
   padding: 0;
+  margin: -14px 0 0 -18px;
 }
 
 .social-link {
@@ -49,6 +50,7 @@
 
 .tw::before {
   mask-image: url("../images/social-twitter.svg");
+  right: 2px;
 }
 
 .fb::before {
@@ -90,4 +92,25 @@
   justify-self: end;
   left: 15px;
   position: relative;
+  top: 2px;
+}
+
+.footer-logo-academy::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 15px;
+  width: 115px;
+  height: 33px;
+  background-color: #000000;
+  mask-image: url("../images/logo-htmlacademy.svg");
+}
+
+.footer-logo-academy:hover::before {
+  background-color: #756257;
+}
+
+
+.footer-logo-academy img {
+  opacity: 0;
 }

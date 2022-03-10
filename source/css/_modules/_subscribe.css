@@ -1,5 +1,21 @@
 .subscribe {
-  padding: 0 72px 140px;
+  padding: 0 72px 142px;
+}
+
+.subscribe .section-title {
+  margin: 1px 0 46px;
+}
+
+.subscribe .section-description {
+  margin: 0 0 46px;
+}
+
+.subscribe-alter .section-title {
+  margin: 0 0 29px;
+}
+
+.subscribe-alter .section-description {
+  margin: 0 0 46px;
 }
 
 .subscribe-alter {
@@ -8,12 +24,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
-  padding-top: 92px;
+  padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.subscribe-alter h2 {
-  margin: 0 0 30px;
 }
 
 .form-field {
@@ -36,6 +48,7 @@
   border: 2px solid transparent;
   background-color: #f2f2f2;
   width: 100%;
+  font: inherit;
   line-height: 26px;
 }
 
@@ -61,6 +74,7 @@
   border-top-left-radius: 0;
   background-color: #83b3d3;
   min-width: 200px;
+  height: 60px;
 }
 
 .button-subscribe:hover {
@@ -69,12 +83,4 @@
 
 .button-subscribe:focus-visible {
   outline: 3px solid #756257;
-}
-
-.subscribe .section-title {
-  margin: 0 0 46px;
-}
-
-.subscribe .section-description {
-  margin: 0 0 46px;
 }

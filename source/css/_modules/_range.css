@@ -22,12 +22,19 @@
 }
 
 .range-sign:hover {
-  opacity: 0.6;
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .range-sign:focus-within {
   outline: 3px solid #68a2ca;
   box-shadow: inset 3px 3px #68a2ca;
+}
+
+.range-sign:active {
+  background-color: #756257;
+  outline: none;
+  box-shadow: none;
+  border-color: #ffffff;
 }
 
 .range-sign:nth-of-type(odd) {
@@ -50,7 +57,7 @@
 
 .range-price {
   margin-left: auto;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .range-field::-webkit-outer-spin-button,
