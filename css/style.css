@@ -978,13 +978,13 @@ body {
 .count-pages select {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 10px 50px 12px 11px;
+  padding: 10px 50px 12px 15px;
   width: 160px;
   font-size: inherit;
 }
 
 .count-pages-title {
-  margin-right: 50px;
+  margin-right: 47px;
 }
 
 .pic-item {
@@ -1183,7 +1183,7 @@ body {
 
 .result-sort {
   display: block;
-  width: 16rem;
+  width: 18rem;
 }
 
 .select-control {
@@ -1195,7 +1195,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   color: #333333;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 23px;
   outline: none;
   padding: 9px 50px 12px 18px;
@@ -1205,13 +1205,13 @@ body {
 .select::after {
   background-color: rgba(0,0,0,.3);
   content: "";
-  height: 20px;
+  height: 7px;
   -webkit-mask-image: url("../images/arrow-down.svg");
           mask-image: url("../images/arrow-down.svg");
   position: absolute;
-  right: 17px;
-  top: 14px;
-  width: 20px;
+  right: 22px;
+  top: 20px;
+  width: 12px;
 }
 
 .select-control:hover {

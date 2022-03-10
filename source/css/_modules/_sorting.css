@@ -21,7 +21,7 @@
 
 .result-sort {
   display: block;
-  width: 16rem;
+  width: 18rem;
 }
 
 .select-control {
@@ -31,7 +31,7 @@
   border-radius: 4px;
   box-sizing: border-box;
   color: #333333;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 23px;
   outline: none;
   padding: 9px 50px 12px 18px;
@@ -41,12 +41,12 @@
 .select::after {
   background-color: rgba(0,0,0,.3);
   content: "";
-  height: 20px;
+  height: 7px;
   mask-image: url("../images/arrow-down.svg");
   position: absolute;
-  right: 17px;
-  top: 14px;
-  width: 20px;
+  right: 22px;
+  top: 20px;
+  width: 12px;
 }
 
 .select-control:hover {
