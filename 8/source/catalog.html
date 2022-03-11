@@ -15,7 +15,7 @@
       </a>
     </li>
     <li class="breadcrumbs-item">
-      <a class="breadcrumbs-link">Гостиницы</a>
+      <a href="" class="breadcrumbs-link">Гостиницы</a>
     </li>
   </ol>
 
@@ -24,7 +24,7 @@
 
     <form class="catalog-filter" action="https://echo.htmlacademy.ru/">
       <fieldset class="catalog-filter-group">
-        <legend class="catalog-filter-title">Инфраструктура</legend>
+        <legend class="catalog-filter-title">Инфраструктура:</legend>
         <ul class="catalog-filter-list">
           <li class="catalog-filter-item">
             <input class="control-input visually-hidden" type="checkbox" name="features[]" value="swimmpool" id="swimmpool" checked>
@@ -48,7 +48,7 @@
       </fieldset>
 
       <fieldset class="catalog-filter-group">
-        <legend class="catalog-filter-title">Тип жилья</legend>
+        <legend class="catalog-filter-title">Тип жилья:</legend>
         <ul class="catalog-filter-list">
           <li class="catalog-filter-item">
             <input class="control-input visually-hidden" type="radio" name="radio" id="hotel" value="hotel" checked>
@@ -81,12 +81,26 @@
             <input class="range-field" type="number" name="max-price" min="0" max="11100" step="100" value="9000">
             <span class="range-price">до</span>
           </label>
+          <div class="range-slider-target range-slider-ltr range-slider-horizontal range-slider-txt-dir-ltr">
+            <div class="range-slider-base">
+              <div class="range-slider-connects">
+                <div class="range-slider-connect" style="transform: translate(0%, 0px) scale(1, 1);">
+                </div>
+              </div>
+              <div class="range-slider-origin" style="transform: translate(-100%, 0px); z-index: 5;">
+                <div class="range-slider-handle range-slider-handle-lower" data-handle="0" tabindex="0" aria-label="Меньше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="0.0" aria-valuetext="0.00"><div class="range-slider-touch-area"></div></div></div><div class="range-slider-origin" style="transform: translate(0%, 0px); z-index: 4;"><div class="range-slider-handle range-slider-handle-upper" data-handle="1" tabindex="0" aria-label="Больше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="11100.0" aria-valuetext="11100.00">
+                  <div class="range-slider-touch-area">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </fieldset>
 
       <div class="catalog-filter-buttons">
         <button class="button button-apply" type="submit">Применить</button>
-        <button class="button button-reset" type="reset">Сбросить</button>
+        <button class="button-reset" type="reset">Сбросить</button>
       </div>
     </form>
   </section>
@@ -98,11 +112,14 @@
     Найдено гостиниц: 38
   </h2>
 
-  <select class="select-control" aria-label="Сортировка">
-    <option value="popular">Сначала дешёвые</option>
-    <option value="cheap">Сначала дорогое</option>
-    <option value="expensive">Сначала популярное</option>
-  </select>
+  <label aria-label="Сортировка.">
+    <span class="result-sort select">
+      <select class="select-control" name="sorting-dir" data-submit="">
+        <option value="price-up">Сначала дешёвые</option>
+        <option value="price-down">Сначала дорогие</option>
+      </select>
+    </span>
+  </label>
 
   <ul class="mode-list">
     <li>
@@ -201,11 +218,17 @@
     </li>
   </ul>
   <form class="count-pages" action="https://echo.htmlacademy.ru" method="get">
-    <label>
-      Гостиниц на странице:
-      <select name="housing-count">
+    <label class="result-limit">
+      <p class="result-page-title">Гостиниц на странице:</p>
+      <span class="result-limit-list select">
+      <select class="select-control" name="housing-count">
         <option selected>4</option>
       </select>
+    </span>
+      <!-- <span class="count-pages-title">Гостиниц на странице:</span>
+      <select class="select-control" name="housing-count">
+        <option selected>4</option>
+      </select> -->
     </label>
   </form>
 </div>

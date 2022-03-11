@@ -9,14 +9,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
-  padding: 54px 72px 86px;
+  padding: 37px 72px 52px;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 1.294;
   font-weight: 700;
-  margin: 0 0 5px;
+  margin: 0;
 }
 
 /* фильтр */
@@ -50,9 +50,14 @@
   line-height: 23px;
 }
 
+.control-input:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 .control::after {
   position: absolute;
-  background-image: url("../images/checkbox.svg");
+  mask-image: url("../images/checkbox.svg");
+  background-color: #3f5e72;
   width: 20px;
   height: 20px;
   left: 0;
@@ -70,6 +75,23 @@
   content: "";
 }
 
+.control-input:focus-visible + .control::before,
+.control-input:focus-visible + .control::after {
+  outline: 2px solid #83b3d3;
+  opacity: 0.6;
+}
+
+.control:hover::before,
+.control:hover::after {
+  opacity: 0.6;
+}
+
+.control:active::before,
+.control:active::after {
+  opacity: 0.3;
+}
+
+
 .control-input:checked + .control::after {
   content: "";
 }
@@ -86,8 +108,8 @@
   padding: 0;
 }
 
-.catalog-filter-group:last-of-type {
-  min-width: 300px;
+.catalog-filter-group:nth-child(2) {
+  padding-left: 4px;
 }
 
 .catalog-filter-buttons {
@@ -97,7 +119,7 @@
 }
 
 .control-radio::after {
-  background-image: url("../images/radio.svg");
+  mask-image: url("../images/radio.svg");
 }
 
 .control-radio::before {

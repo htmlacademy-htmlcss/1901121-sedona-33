@@ -7,15 +7,17 @@
   grid-template-columns: 1fr auto 1fr;
   padding: 25px 72px;
   gap: 36px;
+  align-items: center;
 }
 
 .footer-social-list {
   list-style-type: none;
   display: flex;
   padding: 0;
+  margin: -14px 0 0 -18px;
 }
 
-.footer-social-item {
+.social-link {
   border-radius: 10px;
   color: #83b3d3;
   display: flex;
@@ -24,28 +26,39 @@
   width: 34px;
 }
 
-.tw {
-  background-color: transparent;
-  background-image: url("../images/social-twitter.svg");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+.social-link:hover {
+  color: #68a2ca;
 }
 
-.fb {
-  background-color: transparent;
-  background-image: url("../images/social-facebook.svg");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+.social-link:focus-visible {
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+  color: #68a2ca;
 }
 
-.yt {
-  background-color: transparent;
-  background-image: url("../images/social-youtube.svg");
-  background-repeat: no-repeat;
-  width: 20px;
+.social-link:active {
+  opacity: 0.3;
+}
+
+.social-link::before {
+  background-color: currentColor;
+  content: "";
   height: 20px;
+  margin: auto;
+  width: 20px;
+}
+
+.tw::before {
+  mask-image: url("../images/social-twitter.svg");
+  right: 2px;
+}
+
+.fb::before {
+  mask-image: url("../images/social-facebook.svg");
+}
+
+.yt::before {
+  mask-image: url("../images/social-youtube.svg");
 }
 
 .footer-cotacts {
@@ -57,8 +70,47 @@
   padding: 15px;
 }
 
+.footer-cotacts:hover {
+  color: #756257;
+}
+
+.footer-cotacts:focus {
+  color: #756257;
+}
+
+.footer-cotacts:focus-visible {
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+  color: #756257;
+}
+
+.footer-cotacts:active {
+  opacity: 0.3;
+}
+
 .footer-logo-academy {
   justify-self: end;
   left: 15px;
   position: relative;
+  top: 2px;
+}
+
+.footer-logo-academy::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 15px;
+  width: 115px;
+  height: 33px;
+  background-color: #000000;
+  mask-image: url("../images/logo-htmlacademy.svg");
+}
+
+.footer-logo-academy:hover::before {
+  background-color: #756257;
+}
+
+
+.footer-logo-academy img {
+  opacity: 0;
 }
