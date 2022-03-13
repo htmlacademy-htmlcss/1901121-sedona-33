@@ -103,19 +103,16 @@
 
 .catalog-filter-group {
   margin: 14px 0 2rem 2rem;
-  min-width: 180px;
+  width: 185px;
   border: none;
   padding: 0;
-}
-
-.catalog-filter-group:nth-child(2) {
-  padding-left: 4px;
 }
 
 .catalog-filter-buttons {
   width: 160px;
   margin: auto 0 32px;
   text-align: center;
+  align-items: start;
 }
 
 .control-radio::after {

@@ -15,7 +15,7 @@
       </a>
     </li>
     <li class="breadcrumbs-item">
-      <a href="" class="breadcrumbs-link">Гостиницы</a>
+      <a href="#" class="breadcrumbs-link">Гостиницы</a>
     </li>
   </ol>
 
@@ -81,16 +81,14 @@
             <input class="range-field" type="number" name="max-price" min="0" max="11100" step="100" value="9000">
             <span class="range-price">до</span>
           </label>
-          <div class="range-slider-target range-slider-ltr range-slider-horizontal range-slider-txt-dir-ltr">
+          <div class="range-slider-target">
             <div class="range-slider-base">
               <div class="range-slider-connects">
                 <div class="range-slider-connect" style="transform: translate(0%, 0px) scale(1, 1);">
                 </div>
               </div>
               <div class="range-slider-origin" style="transform: translate(-100%, 0px); z-index: 5;">
-                <div class="range-slider-handle range-slider-handle-lower" data-handle="0" tabindex="0" aria-label="Меньше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="0.0" aria-valuetext="0.00"><div class="range-slider-touch-area"></div></div></div><div class="range-slider-origin" style="transform: translate(0%, 0px); z-index: 4;"><div class="range-slider-handle range-slider-handle-upper" data-handle="1" tabindex="0" aria-label="Больше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="11100.0" aria-valuetext="11100.00">
-                  <div class="range-slider-touch-area">
-                  </div>
+                <div class="range-slider-handle r" tabindex="0" aria-label="Меньше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="0.0" aria-valuetext="0.00"><div class="range-slider-touch-area"></div></div></div><div class="range-slider-origin" style="transform: translate(0%, 0px); z-index: 4;"><div class="range-slider-handle range-slider-handle-upper" tabindex="0" aria-label="Больше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="11100.0" aria-valuetext="11100.00">
                 </div>
               </div>
             </div>
@@ -114,7 +112,7 @@
 
   <label aria-label="Сортировка.">
     <span class="result-sort select">
-      <select class="select-control" name="sorting-dir" data-submit="">
+      <select class="select-control" name="sorting-dir">
         <option value="price-up">Сначала дешёвые</option>
         <option value="price-down">Сначала дорогие</option>
       </select>
@@ -162,7 +160,7 @@
     <p class="housing-card-type">Гостиница</p>
     <p class="housing-card-price">От 3000 ₽</p>
     <a class="housing-card-button button" href="#">Подробнее</a>
-    <a class="housing-card-button favor" href="#">В избранное</a>
+    <a class="housing-card-button housing-favor" href="#">В избранное</a>
     <p class="housing-stars housing-stars-3">
       <span class="visually-hidden">3 звезды.</span>
     </p>
@@ -174,7 +172,7 @@
     <p class="housing-card-type">Гостиница</p>
     <p class="housing-card-price">От 2000 ₽</p>
     <a class="housing-card-button button" href="#">Подробнее</a>
-    <a class="housing-card-button favor favor-active" href="#">В избранном</a>
+    <a class="housing-card-button button housing-favor housing-favor-active" href="#">В избранном</a>
     <p class="housing-stars housing-stars-2">
       <span class="visually-hidden">2 звезды.</span>
     </p>
@@ -219,16 +217,12 @@
   </ul>
   <form class="count-pages" action="https://echo.htmlacademy.ru" method="get">
     <label class="result-limit">
-      <p class="result-page-title">Гостиниц на странице:</p>
+      <span class="result-page-title">Гостиниц на странице:</span>
       <span class="result-limit-list select">
       <select class="select-control" name="housing-count">
         <option selected>4</option>
       </select>
-    </span>
-      <!-- <span class="count-pages-title">Гостиниц на странице:</span>
-      <select class="select-control" name="housing-count">
-        <option selected>4</option>
-      </select> -->
+      </span>
     </label>
   </form>
 </div>
