@@ -19,7 +19,6 @@
   display: block;
   box-sizing: border-box;
   width: 55px;
-  height: 55px;
   padding: 14px 15px 16px;
   color: #ffffff;
   background-color: #83b3d3;
@@ -28,17 +27,18 @@
   line-height: 26px;
   font-weight: 700;
   border-radius: 4px;
+  outline-offset: 0;
 }
 
 .pagination-link:hover:not(.pagination-active) {
   background-color: #68a2ca;
 }
 
-.pagination-link:focus-visible:not(.pagination-active) {
+.pagination-link:focus-visible {
   outline: 3px solid #756257;
 }
 
-.pagination-link:active:not(.pagination-active) {
+.pagination-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -49,50 +49,4 @@
 .pagination-active {
   background-color: #f2f2f2;
   color: #000000;
-}
-
-.count-pages {
-  margin-left: auto;
-}
-
-.count-pages select:hover {
-  border-color: #83b3d3;
-}
-
-.count-pages select:focus-visible {
-  outline: 2px solid #83b3d3;
-}
-
-.count-pages select:active {
-  border-color: #e5e5e5;
-  color: rgba(51, 51, 51, 0.3);
-}
-
-.count-pages select {
-  border: 2px solid #e5e5e5;
-  border-radius: 4px;
-  padding: 10px 50px 12px 15px;
-  width: 160px;
-  font-size: inherit;
-}
-
-/* .count-pages-title {
-  margin-right: 47px;
-} */
-
-.result-limit {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
-.result-limit-list {
-  display: block;
-  margin-left: 50px;
-  width: 160px;
-}
-
-.result-page-title {
-  padding-right: 2px;
 }

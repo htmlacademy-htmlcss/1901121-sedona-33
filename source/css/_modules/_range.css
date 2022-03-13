@@ -95,7 +95,8 @@
   top: 8px;
 }
 
-.range-slider-connect, .range-slider-origin {
+.range-slider-connect,
+.range-slider-origin {
   position: absolute;
   transform-origin: 0 0;
   transform-style: flat;
@@ -135,4 +136,3 @@
   outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
-

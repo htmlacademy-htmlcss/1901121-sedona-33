@@ -7,6 +7,11 @@
   <link href="css/style.css" rel="stylesheet">
   <title>Седона: Каталог</title>
 </head>
+<script>
+  window.MODAL_PREFIX = 'modal-';
+
+</script>
+<script src="https://efiand.github.io/pineglade-modal/pineglade-modal.min.js"></script>
 
 <body class="container">
   <header class="page-header">
@@ -58,7 +63,7 @@
           </a>
         </li>
         <li class="breadcrumbs-item">
-          <a href="" class="breadcrumbs-link">Гостиницы</a>
+          <a href="#" class="breadcrumbs-link">Гостиницы</a>
         </li>
       </ol>
       <section class="catalog-housing">
@@ -121,21 +126,19 @@
                 <input class="range-field" type="number" name="max-price" min="0" max="11100" step="100" value="9000">
                 <span class="range-price">до</span>
               </label>
-              <div class="range-slider-target range-slider-ltr range-slider-horizontal range-slider-txt-dir-ltr">
+              <div class="range-slider-target">
                 <div class="range-slider-base">
                   <div class="range-slider-connects">
                     <div class="range-slider-connect" style="transform: translate(0%, 0px) scale(1, 1);">
                     </div>
                   </div>
                   <div class="range-slider-origin" style="transform: translate(-100%, 0px); z-index: 5;">
-                    <div class="range-slider-handle range-slider-handle-lower" data-handle="0" tabindex="0" aria-label="Меньше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="0.0" aria-valuetext="0.00">
+                    <div class="range-slider-handle r" tabindex="0" aria-label="Меньше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="0.0" aria-valuetext="0.00">
                       <div class="range-slider-touch-area"></div>
                     </div>
                   </div>
                   <div class="range-slider-origin" style="transform: translate(0%, 0px); z-index: 4;">
-                    <div class="range-slider-handle range-slider-handle-upper" data-handle="1" tabindex="0" aria-label="Больше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="11100.0" aria-valuetext="11100.00">
-                      <div class="range-slider-touch-area">
-                      </div>
+                    <div class="range-slider-handle range-slider-handle-upper" tabindex="0" aria-label="Больше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="11100.0" aria-valuetext="11100.00">
                     </div>
                   </div>
                 </div>
@@ -155,7 +158,7 @@
       </h2>
       <label aria-label="Сортировка.">
         <span class="result-sort select">
-          <select class="select-control" name="sorting-dir" data-submit="">
+          <select class="select-control" name="sorting-dir">
             <option value="price-up">Сначала дешёвые</option>
             <option value="price-down">Сначала дорогие</option>
           </select>
@@ -201,7 +204,7 @@
         <p class="housing-card-type">Гостиница</p>
         <p class="housing-card-price">От 3000 ₽</p>
         <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button favor" href="#">В избранное</a>
+        <a class="housing-card-button housing-favor" href="#">В избранное</a>
         <p class="housing-stars housing-stars-3">
           <span class="visually-hidden">3 звезды.</span>
         </p>
@@ -213,7 +216,7 @@
         <p class="housing-card-type">Гостиница</p>
         <p class="housing-card-price">От 2000 ₽</p>
         <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button favor favor-active" href="#">В избранном</a>
+        <a class="housing-card-button button housing-favor housing-favor-active" href="#">В избранном</a>
         <p class="housing-stars housing-stars-2">
           <span class="visually-hidden">2 звезды.</span>
         </p>
@@ -256,16 +259,12 @@
       </ul>
       <form class="count-pages" action="https://echo.htmlacademy.ru" method="get">
         <label class="result-limit">
-          <p class="result-page-title">Гостиниц на странице:</p>
+          <span class="result-page-title">Гостиниц на странице:</span>
           <span class="result-limit-list select">
             <select class="select-control" name="housing-count">
               <option selected="">4</option>
             </select>
           </span>
-          <!-- <span class="count-pages-title">Гостиниц на странице:</span>
-      <select class="select-control" name="housing-count">
-        <option selected>4</option>
-      </select> -->
         </label>
       </form>
     </div>
@@ -316,6 +315,61 @@
       </a>
     </section>
   </footer>
+  <div class="modal modal-container">
+    <div class="modal modal-auth">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <form class="form modal-body" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form-section">
+          <legend class="visually-hidden">Даты заезда и выезда.</legend>
+          <p class="form-group">
+            <label class="form-label" for="date-from">Дата заезда:</label>
+            <input class="form-field" id="date-from" name="dates[]" placeholder="Укажите дату" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+            <span class="form-status"></span>
+            <button class="form-button form-button-datepicker" type="button">
+              <span class="visually-hidden">Выбрать дату.</span>
+            </button>
+          </p>
+          <p class="form-group">
+            <label class="form-label" for="date-to">Дата выезда:</label>
+            <input class="form-field" id="date-to" name="dates[]" placeholder="Укажите дату" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+            <span class="form-status"></span>
+            <button class="form-button form-button-datepicker" type="button">
+              <span class="visually-hidden">Выбрать дату.</span>
+            </button>
+          </p>
+        </fieldset>
+        <fieldset class="form-section">
+          <legend class="visually-hidden">Количество человек.</legend>
+          <p class="form-group form-group-short">
+            <label class="form-label" for="count-adults">Взрослые:</label>
+            <button class="form-button form-button-step-down" type="button">
+              <span class="visually-hidden">Меньше.</span>
+            </button>
+            <input class="form-field form-field-counter" id="count-adults" name="count[]" value="2" type="number" min="1" max="99" required=""> <button class="form-button form-button-step-up" type="button">
+              <span class="visually-hidden">Больше.</span>
+            </button>
+          </p>
+          <p class="form-group form-group-short">
+            <label class="form-label" for="count-children">Дети:</label>
+            <button class="form-button form-button-step-down" type="button">
+              <span class="visually-hidden">Меньше.</span>
+            </button>
+            <input class="form-field form-field-counter" id="count-children" name="count[]" value="1" type="number" aria-describedby="tooltip-count-children" min="0" max="99" required="">
+            <span class="form-tooltip" aria-hidden="true">
+              <span class="form-tooltip-content" role="tooltip" id="tooltip-count-children"> Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно. </span>
+            </span>
+            <button class="form-button form-button-step-up" type="button">
+              <span class="visually-hidden">Больше.</span>
+            </button>
+          </p>
+        </fieldset>
+        <button class="button button-big button-secondary form-submit" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
   <script>
     window.pinegladePP = {
       breakpoints: [1200]
