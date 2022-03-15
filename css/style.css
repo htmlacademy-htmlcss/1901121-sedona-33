@@ -15,6 +15,16 @@ body {
   margin: 0;
 }
 
+button {
+  border: none;
+}
+
+input {
+  box-shadow: none;
+  box-sizing: border-box;
+  font: inherit;
+}
+
 .advantages-header {
   margin: 0;
   padding: 0;
@@ -736,22 +746,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  display: none;
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  overflow-y: scroll;
-}
-
-.modal-container,
-.modal-auth {
-  background-color: #ffffff;
-  border-radius: 30px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-  display: flex;
-  padding-bottom: 70px;
 }
 
 .modal {
@@ -759,6 +757,18 @@ body {
   margin: auto;
   padding: 40px;
   background-color: #ffffff;
+}
+
+.modal-auth {
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 70px;
+  width: 575px;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 .modal-title {
@@ -772,15 +782,6 @@ body {
   max-width: 499px;
 }
 
-.modal-auth {
-  width: 715px;
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  padding: 3rem 4rem 0;
-}
-
 .modal-close-button {
   background-color: #f2f2f2;
   border-radius: 50%;
@@ -789,6 +790,21 @@ body {
   margin: 0 0 16px auto;
   width: 53px;
   cursor: pointer;
+  border: none;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  outline: none;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-close-button::before {
@@ -804,23 +820,6 @@ body {
 .visuale-hidden {
   position: fixed;
   transform: scale(0);
-}
-
-/* .modal-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-} */
-
-.modal-opened {
-  display: flex;
-}
-
-.modal-inner {
-  margin: auto;
 }
 
 .form-group,
@@ -850,13 +849,27 @@ body {
   width: 145px;
 }
 
-.form-field {
+.form-field-modal {
   background-color: #f2f2f2;
   border: 2px solid transparent;
   border-radius: 4px;
   flex-grow: 1;
   font-weight: 700;
   padding: 2px 20px 4px;
+}
+
+.form-field-modal:hover {
+  background-color: #e6e6e6;
+}
+
+.form-field-modal:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.form-field-modal:active {
+  border: 2px solid #000000;
+  outline: none;
 }
 
 .form-field-counter {
@@ -876,19 +889,19 @@ body {
   background-color: transparent;
   border-radius: 4px;
   height: 20px;
-  opacity: .3;
+  opacity: 0.3;
   position: absolute;
   right: 16px;
   top: 15px;
   width: 20px;
 }
 
-.form-button-datepicker:before {
+.form-button-datepicker::before {
   -webkit-mask-image: url("../images/date.svg");
           mask-image: url("../images/date.svg");
 }
 
-.form-button:before {
+.form-button::before {
   background-color: currentColor;
   bottom: 0;
   content: "";
@@ -903,12 +916,12 @@ body {
   width: 50%;
 }
 
-.form-button-step-down:before {
+.form-button-step-down::before {
   -webkit-mask-image: url("../images/minus.svg");
           mask-image: url("../images/minus.svg");
 }
 
-.form-button-step-up:before {
+.form-button-step-up::before {
   -webkit-mask-image: url("../images/plus.svg");
           mask-image: url("../images/plus.svg");
 }
@@ -920,7 +933,15 @@ body {
 }
 
 .form-button-step-down {
-  right: 98px;
+  right: 88px;
+  top: 12px;
+  border: none;
+}
+
+.form-button-step-up {
+  right: 40px;
+  top: 12px;
+  border: none;
 }
 
 .form-tooltip {
@@ -936,7 +957,16 @@ body {
   width: 25px;
 }
 
-.form-tooltip:before {
+.form-tooltip:hover {
+  background-color: #68a2ca;
+}
+
+.form-tooltip:hover .form-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-tooltip::before {
   background-color: currentColor;
   content: "";
   height: 9px;
@@ -955,7 +985,7 @@ body {
   line-height: 20px;
   margin-top: 15px;
   min-width: 216px;
-  opacity: .01;
+  opacity: 0.1;
   padding: 20px 20px 22px;
   position: absolute;
   top: 100%;
@@ -964,7 +994,7 @@ body {
   visibility: hidden;
 }
 
-.form-tooltip-content:before {
+.form-tooltip-content::before {
   bottom: 100%;
   content: "";
   height: 15px;
@@ -973,7 +1003,7 @@ body {
   right: 0;
 }
 
-.form-tooltip-content:after {
+.form-tooltip-content::after {
   border: 9px solid transparent;
   border-bottom: 9px solid #333333;
   bottom: 100%;
@@ -997,6 +1027,20 @@ body {
   font-size: 20px;
   line-height: 26px;
   padding: 19px 40px 15px;
+}
+
+.button-big:hover {
+  background-color: #68a2ca;
+}
+
+.button-big:focus-visible {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.button-big:active {
+  background-color: #68a2ca;
+  color: rgb(255, 255, 255, 0.3);
 }
 
 .mode-list {
