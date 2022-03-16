@@ -883,9 +883,18 @@ body {
   width: 20px;
 }
 
+.form-button:focus{
+  opacity: 1;
+}
+
 .form-button-datepicker::before {
   -webkit-mask-image: url("../images/date.svg");
           mask-image: url("../images/date.svg");
+}
+
+.form-button-datepicker:focus-visible {
+  outline: none;
+  color: inherit;
 }
 
 .form-button::before {
@@ -923,12 +932,35 @@ body {
   right: 98px;
   top: 15px;
   border: none;
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.form-button-step-down:hover {
+  color: #000000;
+}
+
+.form-button-step-down:focus-visible {
+  color: #000000;
+  outline: 3px solid #83b3d3;
+}
+
+.form-button-step-down:active {
+  color: inherit;
 }
 
 .form-button-step-up {
   right: 17px;
   top: 13px;
   border: none;
+}
+
+.form-button-step-up:hover {
+  color: #000000;
+}
+
+.form-button-step-up:focus-visible {
+  color: #000000;
+  outline: 3px solid #83b3d3;
 }
 
 .form-tooltip {
