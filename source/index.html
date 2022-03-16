@@ -3,6 +3,7 @@
 {% set page = 'index' %}
 
 {% block href_main %}{% endblock %}
+{% block modal %} {% include '_modal.html' %} {% endblock %}
 {% block subscribe_class %}subscribe-alter{% endblock %}
 
 {% block main %}
@@ -111,7 +112,7 @@
     Укажите предполагаемые даты поездки, <br>
     и мы покажем вам лучшие предложения гостиниц в Седоне &nbsp;&nbsp;
   </p>
-  <a class="find-hotel-button" href="#">Поиск гостиницы в Седоне</a>
+  <a class="find-hotel-button" href="#" data-modal-open="search">Поиск гостиницы в Седоне</a>
 </section>
 
 {% endblock %}
