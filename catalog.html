@@ -7,13 +7,8 @@
   <link href="css/style.css" rel="stylesheet">
   <title>Седона: Каталог</title>
 </head>
-<script>
-  window.MODAL_PREFIX = 'modal-';
 
-</script>
-<script src="https://efiand.github.io/pineglade-modal/pineglade-modal.min.js"></script>
-
-<body class="container">
+<body class="container page">
   <header class="page-header">
     <a class="navigation-logo-link" href="index.html">
       <img class="navigation-logo" src="images/logo-header.svg" alt="Логотип города Седона." width="139" height="70">
@@ -24,7 +19,7 @@
           <a class="navigation-link " href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">О Седоне</a>
+          <a class="navigation-link " href="modal.html">О Седоне</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link navigation-link-current">Гостиницы</a>
@@ -188,11 +183,11 @@
     <ul class="housing-list">
       <li class="housing-card">
         <img class="housing-card-image" src="images/hotel-amara.jpg" width="299" height="206" alt="Фото объекта.">
-        <h3 class="housing-card-title">Amara Resort & Spa</h3>
+        <h3 class="housing-card-title">Amara Resort &amp; Spa</h3>
         <p class="housing-card-type">Гостиница</p>
         <p class="housing-card-price">От 4000 ₽</p>
         <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button favor" href="#">В избранное</a>
+        <a class="housing-card-button housing-favor" href="#">В избранное</a>
         <p class="housing-stars housing-stars-4">
           <span class="visually-hidden">4 звезды.</span>
         </p>
@@ -228,7 +223,7 @@
         <p class="housing-card-type">Гостиница</p>
         <p class="housing-card-price">От 3000 ₽</p>
         <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button favor" href="#">В избранное</a>
+        <a class="housing-card-button housing-favor" href="#">В избранное</a>
         <p class="housing-stars housing-stars-2">
           <span class="visually-hidden">2 звезды.</span>
         </p>
@@ -315,61 +310,6 @@
       </a>
     </section>
   </footer>
-  <div class="modal-container">
-    <div class="modal modal-auth">
-      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-      <button class="modal-close-button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <form class="form modal-body" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form-section">
-          <legend class="visually-hidden">Даты заезда и выезда.</legend>
-          <p class="form-group">
-            <label class="form-label" for="date-from">Дата заезда:</label>
-            <input class="form-field-modal" id="date-from" name="dates[]" placeholder="Укажите дату" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
-            <span class="form-status"></span>
-            <button class="form-button form-button-datepicker" type="button">
-              <span class="visually-hidden">Выбрать дату.</span>
-            </button>
-          </p>
-          <p class="form-group">
-            <label class="form-label" for="date-to">Дата выезда:</label>
-            <input class="form-field-modal" id="date-to" name="dates[]" placeholder="Укажите дату" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
-            <span class="form-status"></span>
-            <button class="form-button form-button-datepicker" type="button">
-              <span class="visually-hidden">Выбрать дату.</span>
-            </button>
-          </p>
-        </fieldset>
-        <fieldset class="form-section">
-          <legend class="visually-hidden">Количество человек.</legend>
-          <p class="form-group form-group-short">
-            <label class="form-label" for="count-adults">Взрослые:</label>
-            <button class="form-button form-button-step-down" type="button">
-              <span class="visually-hidden">Меньше.</span>
-            </button>
-            <input class="form-field-modal form-field-counter" id="count-adults" name="count[]" value="2" type="number" min="1" max="99" required=""> <button class="form-button form-button-step-up" type="button">
-              <span class="visually-hidden">Больше.</span>
-            </button>
-          </p>
-          <p class="form-group form-group-short">
-            <label class="form-label" for="count-children">Дети:</label>
-            <button class="form-button form-button-step-down" type="button">
-              <span class="visually-hidden">Меньше.</span>
-            </button>
-            <input class="form-field-modal form-field-counter" id="count-children" name="count[]" value="1" type="number" aria-describedby="tooltip-count-children" min="0" max="99" required="">
-            <span class="form-tooltip" aria-hidden="true">
-              <span class="form-tooltip-content" role="tooltip" id="tooltip-count-children"> Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно. </span>
-            </span>
-            <button class="form-button form-button-step-up" type="button">
-              <span class="visually-hidden">Больше.</span>
-            </button>
-          </p>
-        </fieldset>
-        <button class="button button-big button-secondary form-submit" type="submit">Найти</button>
-      </form>
-    </div>
-  </div>
   <script>
     window.pinegladePP = {
       breakpoints: [1200, 1199]
@@ -377,5 +317,10 @@
 
   </script>
   <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
+  <script>
+    window.MODAL_PREFIX = 'modal-';
+
+  </script>
+  <script src="https://efiand.github.io/pineglade-modal/pineglade-modal.min.js"></script>
 </body>
 </html>

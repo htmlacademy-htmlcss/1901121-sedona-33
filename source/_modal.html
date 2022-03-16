@@ -1,0 +1,55 @@
+<div class="modal" data-modal="search">
+  <div class="modal-inner">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+    <button class="modal-close-button" data-modal-close="search">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <form class="form modal-body" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="form-section">
+        <legend class="visually-hidden">Даты заезда и выезда.</legend>
+        <p class="form-group">
+          <label class="form-label" for="date-from">Дата заезда:</label>
+          <input class="form-field-modal" id="date-from" name="dates[]" placeholder="27 апреля 2020" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+          <span class="form-status form-status-error">Мы не можем отправить вас в прошлое.</span>
+          <button class="form-button form-button-datepicker" type="button">
+            <span class="visually-hidden">Выбрать дату.</span>
+          </button>
+        </p>
+        <p class="form-group">
+          <label class="form-label" for="date-to">Дата выезда:</label>
+          <input class="form-field-modal" id="date-to" name="dates[]" placeholder="1 сентября 2021" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+          <span class="form-status form-status-correct">На эти даты есть свободные номера. Пока есть.</span>
+          <button class="form-button form-button-datepicker" type="button">
+            <span class="visually-hidden">Выбрать дату.</span>
+          </button>
+        </p>
+      </fieldset>
+      <fieldset class="form-section">
+        <legend class="visually-hidden">Количество человек.</legend>
+        <p class="form-group form-group-short">
+          <label class="form-label" for="count-adults">Взрослые:</label>
+          <button class="form-button form-button-step-down" type="button">
+            <span class="visually-hidden">Меньше.</span>
+          </button>
+          <input class="form-field-modal form-field-counter" id="count-adults" name="count[]" value="2" type="number" min="1" max="99" required=""> <button class="form-button form-button-step-up" type="button">
+            <span class="visually-hidden">Больше.</span>
+          </button>
+        </p>
+        <p class="form-group form-group-short">
+          <label class="form-label" for="count-children">Дети:</label>
+          <button class="form-button form-button-step-down" type="button">
+            <span class="visually-hidden">Меньше.</span>
+          </button>
+          <input class="form-field-modal form-field-counter" id="count-children" name="count[]" value="1" type="number" aria-describedby="tooltip-count-children" min="0" max="99" required="">
+          <span class="form-tooltip" aria-hidden="true">
+            <span class="form-tooltip-content" role="tooltip" id="tooltip-count-children"> Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно. </span>
+          </span>
+          <button class="form-button form-button-step-up" type="button">
+            <span class="visually-hidden">Больше.</span>
+          </button>
+        </p>
+      </fieldset>
+      <button class="button button-big button-secondary form-submit" type="submit">Найти</button>
+    </form>
+  </div>
+</div>

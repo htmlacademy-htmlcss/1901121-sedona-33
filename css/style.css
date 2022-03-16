@@ -1,28 +1,16 @@
 html {
   height: 100%;
   background-color: #e5e5e5;
+  /* overflow-y: scroll; */
+  margin: 0 !important; /* stylelint-disable */
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 1.16667;
   background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin: 0;
-}
-
-button {
-  border: none;
-}
-
-input {
-  box-shadow: none;
-  box-sizing: border-box;
-  font: inherit;
 }
 
 .advantages-header {
@@ -742,44 +730,43 @@ input {
   padding-top: 51px;
 }
 
-.modal-container {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal {
+.modal-inner {
   position: relative;
   margin: auto;
-  padding: 40px;
-  background-color: #ffffff;
-}
-
-.modal-auth {
+  margin-top: 0;
+  padding: 56px 70px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-  display: flex;
   align-items: flex-start;
   padding-bottom: 70px;
   width: 575px;
   flex-wrap: wrap;
-  margin: auto;
+  display: flex;
+}
+
+.modal-opened {
+  display: flex;
 }
 
 .modal-title {
-  margin: 5px 0 62px;
+  margin: 5px -3px 62px;
   padding-right: 32px;
   font-size: 30px;
   line-height: 40px;
   color: #000000;
   font-weight: 700;
   text-transform: uppercase;
-  max-width: 499px;
 }
 
 .modal-close-button {
@@ -933,14 +920,14 @@ input {
 }
 
 .form-button-step-down {
-  right: 88px;
-  top: 12px;
+  right: 98px;
+  top: 15px;
   border: none;
 }
 
 .form-button-step-up {
-  right: 40px;
-  top: 12px;
+  right: 17px;
+  top: 13px;
   border: none;
 }
 
@@ -969,11 +956,11 @@ input {
 .form-tooltip::before {
   background-color: currentColor;
   content: "";
-  height: 9px;
+  height: 20px;
   margin: auto;
   -webkit-mask-image: url("../images/info.svg");
           mask-image: url("../images/info.svg");
-  width: 9px;
+  width: 20px;
 }
 
 .form-tooltip-content {
@@ -983,10 +970,10 @@ input {
   font-size: 16px;
   left: 50%;
   line-height: 20px;
-  margin-top: 15px;
+  margin-top: 14px;
   min-width: 216px;
   opacity: 0.1;
-  padding: 20px 20px 22px;
+  padding: 20px 20px 23px;
   position: absolute;
   top: 100%;
   transform: translateX(-50%);
@@ -1026,7 +1013,7 @@ input {
   border-radius: 10px;
   font-size: 20px;
   line-height: 26px;
-  padding: 19px 40px 15px;
+  padding: 17px 40px 18px;
 }
 
 .button-big:hover {
@@ -1041,6 +1028,10 @@ input {
 .button-big:active {
   background-color: #68a2ca;
   color: rgb(255, 255, 255, 0.3);
+}
+
+.form-status-error {
+  color: #ff5757;
 }
 
 .mode-list {
@@ -1209,6 +1200,34 @@ input {
 
 .navigation-user-link .navigation-fav-count:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.page button {
+  border: none;
+}
+
+.page input {
+  box-shadow: none;
+  box-sizing: border-box;
+  font: inherit;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+  font-weight: 700;
+  /* padding-left: 17px; */
+}
+
+.page input::-webkit-outer-spin-button,
+.page input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .pagination {
@@ -1583,7 +1602,7 @@ input {
 }
 
 .signup-subscribe {
-  padding: 16px 22px 14px;
+  padding: 16px 22px 19px;
   border-radius: 10px 0 0 10px;
   border: 2px solid transparent;
   background-color: #f2f2f2;

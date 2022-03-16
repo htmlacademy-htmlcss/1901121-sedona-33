@@ -7,13 +7,8 @@
   <link href="css/style.css" rel="stylesheet">
   <title>Седона</title>
 </head>
-<script>
-  window.MODAL_PREFIX = 'modal-';
 
-</script>
-<script src="https://efiand.github.io/pineglade-modal/pineglade-modal.min.js"></script>
-
-<body class="container">
+<body class="container page">
   <header class="page-header">
     <a class="navigation-logo-link" href="index.html">
       <img class="navigation-logo" src="images/logo-header.svg" alt="Логотип города Седона." width="139" height="70">
@@ -24,7 +19,7 @@
           <a class="navigation-link navigation-link-current">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">О Седоне</a>
+          <a class="navigation-link " href="modal.html">О Седоне</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link " href="catalog.html">Гостиницы</a>
@@ -156,7 +151,7 @@
         Укажите предполагаемые даты поездки, <br>
         и мы покажем вам лучшие предложения гостиниц в Седоне &nbsp;&nbsp;
       </p>
-      <a class="find-hotel-button" href="#">Поиск гостиницы в Седоне</a>
+      <a class="find-hotel-button" href="#" data-modal-open="search">Поиск гостиницы в Седоне</a>
     </section>
     <div class="subscribe subscribe-alter">
       <h2 class="section-title">
@@ -205,10 +200,10 @@
       </a>
     </section>
   </footer>
-  <div class="modal-container">
-    <div class="modal modal-auth">
+  <div class="modal" data-modal="search">
+    <div class="modal-inner">
       <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-      <button class="modal-close-button">
+      <button class="modal-close-button" data-modal-close="search">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <form class="form modal-body" action="https://echo.htmlacademy.ru" method="post">
@@ -216,16 +211,16 @@
           <legend class="visually-hidden">Даты заезда и выезда.</legend>
           <p class="form-group">
             <label class="form-label" for="date-from">Дата заезда:</label>
-            <input class="form-field-modal" id="date-from" name="dates[]" placeholder="Укажите дату" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
-            <span class="form-status"></span>
+            <input class="form-field-modal" id="date-from" name="dates[]" placeholder="27 апреля 2020" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+            <span class="form-status form-status-error">Мы не можем отправить вас в прошлое.</span>
             <button class="form-button form-button-datepicker" type="button">
               <span class="visually-hidden">Выбрать дату.</span>
             </button>
           </p>
           <p class="form-group">
             <label class="form-label" for="date-to">Дата выезда:</label>
-            <input class="form-field-modal" id="date-to" name="dates[]" placeholder="Укажите дату" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
-            <span class="form-status"></span>
+            <input class="form-field-modal" id="date-to" name="dates[]" placeholder="1 сентября 2021" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+            <span class="form-status form-status-correct">На эти даты есть свободные номера. Пока есть.</span>
             <button class="form-button form-button-datepicker" type="button">
               <span class="visually-hidden">Выбрать дату.</span>
             </button>
@@ -267,5 +262,10 @@
 
   </script>
   <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
+  <script>
+    window.MODAL_PREFIX = 'modal-';
+
+  </script>
+  <script src="https://efiand.github.io/pineglade-modal/pineglade-modal.min.js"></script>
 </body>
 </html>
