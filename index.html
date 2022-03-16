@@ -20,7 +20,7 @@
           <a class="navigation-link navigation-link-current">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link " href="modal.html">О Седоне</a>
+          <a class="navigation-link " href="#">О Седоне</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link " href="catalog.html">Гостиницы</a>
@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-user-link navigation-fav" href="#!">
+          <a class="navigation-user-link navigation-fav" href="#">
             <span class="navigation-fav-count">
               <span class="visually-hidden">Количество лайков:</span>
               12
@@ -68,18 +68,16 @@
         <li class="advantages-group">
           <div class="advantages-info">
             <h3 class="advantages-title">Настоящий <br> городок</h3>
-            <p class="advantages-description">— №1 —</p>
-            <p class="advantages-description">
+            <p class="advantages-description advantages-description-alter">— №1 —</p>
+            <p class="advantages-description advantages-description-alter">
               Седона — не аттракцион <br>
               для туристов, там течёт <br>
               своя жизнь
             </p>
           </div>
-          <picture class="advantages-pic pic">
-            <img class="pic-item" src="images/photo-1.jpg" alt="Городские улицы." width="800" height="384">
-          </picture>
+          <img class="advantages-pic" src="images/photo-1.jpg" alt="Городские улицы." width="800" height="384">
           <ul class="advantages-list advantages-sublist">
-            <li class="advantages-info advantages-iconable advantages-iconable-house">
+            <li class="advantages-info advantages-iconable-house">
               <h3 class="advantages-title">Жильё</h3>
               <p class="advantages-description">
                 Рекомендуем пожить <br>
@@ -87,7 +85,7 @@
                 всё как в кино!
               </p>
             </li>
-            <li class="advantages-info advantages-iconable advantages-iconable-meal">
+            <li class="advantages-info advantages-iconable-meal">
               <h3 class="advantages-title">Еда</h3>
               <p class="advantages-description">
                 Всегда заказывайте <br>
@@ -95,7 +93,7 @@
                 вы не разочаруетесь!
               </p>
             </li>
-            <li class="advantages-info advantages-iconable advantages-iconable-souvenir">
+            <li class="advantages-info advantages-iconable-souvenir">
               <h3 class="advantages-title">Сувениры</h3>
               <p class="advantages-description">
                 Не только китайского, <br>
@@ -106,13 +104,11 @@
           </ul>
         </li>
         <li class="advantages-group">
-          <picture class="advantages-pic pic">
-            <img class="pic-item" src="images/photo-2.jpg" alt="Окрестные пейзажи." width="800" height="384">
-          </picture>
-          <div class="advantages-info">
+          <img class="advantages-pic" src="images/photo-2.jpg" alt="Окрестные пейзажи." width="800" height="384">
+          <div class="advantages-info advantages-info-alter">
             <h3 class="advantages-title">Там есть <br> мост дьявола</h3>
-            <p class="advantages-description">— №2 —</p>
-            <p class="advantages-description">
+            <p class="advantages-description advantages-description-alter">— №2 —</p>
+            <p class="advantages-description advantages-description-alter">
               Да, по нему можно пройти! <br>
               Если вы осмелитесь, <br>
               разумеется
@@ -152,7 +148,7 @@
         Укажите предполагаемые даты поездки, <br>
         и мы покажем вам лучшие предложения гостиниц в Седоне &nbsp;&nbsp;
       </p>
-      <a class="find-hotel-button" href="#" data-modal-open="search">Поиск гостиницы в Седоне</a>
+      <a class="find-hotel-button" href="#">Поиск гостиницы в Седоне</a>
     </section>
     <div class="subscribe subscribe-alter">
       <h2 class="section-title">
@@ -201,10 +197,10 @@
       </a>
     </section>
   </footer>
-  <div class="modal" data-modal="search">
+  <div class="modal modal-closed">
     <div class="modal-inner">
       <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-      <button class="modal-close-button" data-modal-close="search">
+      <button class="modal-close-button" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <form class="form modal-body" action="https://echo.htmlacademy.ru" method="post">
@@ -212,7 +208,7 @@
           <legend class="visually-hidden">Даты заезда и выезда.</legend>
           <p class="form-group">
             <label class="form-label" for="date-from">Дата заезда:</label>
-            <input class="form-field-modal" id="date-from" name="dates[]" placeholder="27 апреля 2020" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+            <input class="form-field-modal" id="date-from" name="dates[]" placeholder="Укажите дату" value="27 апреля 2020" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
             <span class="form-status form-status-error">Мы не можем отправить вас в прошлое.</span>
             <button class="form-button form-button-datepicker" type="button">
               <span class="visually-hidden">Выбрать дату.</span>
@@ -220,7 +216,7 @@
           </p>
           <p class="form-group">
             <label class="form-label" for="date-to">Дата выезда:</label>
-            <input class="form-field-modal" id="date-to" name="dates[]" placeholder="1 сентября 2021" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
+            <input class="form-field-modal" id="date-to" name="dates[]" placeholder="Укажите дату" value="1 сентября 2021" type="text" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$" required="">
             <span class="form-status form-status-correct">На эти даты есть свободные номера. Пока есть.</span>
             <button class="form-button form-button-datepicker" type="button">
               <span class="visually-hidden">Выбрать дату.</span>
@@ -234,7 +230,8 @@
             <button class="form-button form-button-step-down" type="button">
               <span class="visually-hidden">Меньше.</span>
             </button>
-            <input class="form-field-modal form-field-counter" id="count-adults" name="count[]" value="2" type="number" min="1" max="99" required=""> <button class="form-button form-button-step-up" type="button">
+            <input class="form-field-modal form-field-counter" id="count-adults" name="count[]" value="2" type="number" min="1" max="99" required="">
+            <button class="form-button form-button-step-up" type="button">
               <span class="visually-hidden">Больше.</span>
             </button>
           </p>
@@ -256,17 +253,5 @@
       </form>
     </div>
   </div>
-  <script>
-    window.pinegladePP = {
-      breakpoints: [1200, 1199]
-    };
-
-  </script>
-  <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
-  <script>
-    window.MODAL_PREFIX = 'modal-';
-
-  </script>
-  <script src="https://efiand.github.io/pineglade-modal/pineglade-modal.min.js"></script>
 </body>
 </html>
