@@ -945,7 +945,7 @@ body {
 }
 
 .form-button-step-down:active {
-  color: inherit;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .form-button-step-up {
@@ -961,6 +961,10 @@ body {
 .form-button-step-up:focus-visible {
   color: #000000;
   outline: 3px solid #83b3d3;
+}
+
+.form-button-step-up:active {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .form-tooltip {
@@ -1253,7 +1257,6 @@ body {
      -moz-appearance: textfield;
           appearance: textfield;
   font-weight: 700;
-  /* padding-left: 17px; */
 }
 
 .page input::-webkit-outer-spin-button,

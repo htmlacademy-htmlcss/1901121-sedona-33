@@ -15,7 +15,6 @@
   font: inherit;
   appearance: textfield;
   font-weight: 700;
-  /* padding-left: 17px; */
 }
 
 .page input::-webkit-outer-spin-button,

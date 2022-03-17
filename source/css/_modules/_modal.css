@@ -209,7 +209,7 @@
 }
 
 .form-button-step-down:active {
-  color: inherit;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .form-button-step-up {
@@ -226,6 +226,11 @@
   color: #000000;
   outline: 3px solid #83b3d3;
 }
+
+.form-button-step-up:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .form-tooltip {
   background-color: #83b3d3;
   border-radius: 50%;
