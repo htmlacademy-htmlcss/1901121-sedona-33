@@ -1,0 +1,11 @@
+{% extends "_layout.html" %}
+
+{% block modal %} {% include '_modal.html' %} {% endblock %}
+
+{% block main %}
+<h1 class="visually-hidden">Поиск гостиницы</h1>
+<a class="find-hotel-button" href="#" data-modal-open="search">Поиск гостиницы в Седоне</a>
+<script>
+  window.addEventListener('DOMContentLoaded', () => document.querySelector('[data-modal-open]').click());
+</script>
+{% endblock %}

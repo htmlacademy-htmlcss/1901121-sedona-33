@@ -1,0 +1,138 @@
+.catalog-filter-range {
+  margin-left: auto;
+  margin-right: 80px;
+  width: 288px;
+}
+
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0 0;
+}
+
+.range-sign {
+  border: 2px solid;
+  box-sizing: border-box;
+  display: flex;
+  margin-right: -2px;
+  padding: 11px 15px 10px 1rem;
+  position: relative;
+  width: calc(50% + 1px);
+  border-radius: 0 4px 4px 0;
+}
+
+.range-sign:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-sign:focus-within {
+  outline: 3px solid #68a2ca;
+  box-shadow: inset 3px 3px #68a2ca;
+}
+
+.range-sign:active {
+  background-color: #756257;
+  outline: none;
+  box-shadow: none;
+  border-color: #ffffff;
+}
+
+.range-sign:nth-of-type(odd) {
+  border-radius: 4px 0 0 4px;
+  border-right-color: transparent;
+}
+
+.range-field {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  width: 50%;
+  font: inherit;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  appearance: textfield;
+  outline: none;
+}
+
+.range-price {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.range-field::-webkit-outer-spin-button,
+.range-field::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.range-slider-target {
+  -webkit-tap-highlight-color: transparent;
+  margin-top: 20px;
+  padding-right: 52px;
+  width: 100%;
+}
+
+.range-slider-base {
+  height: 20px;
+  position: relative;
+}
+
+.range-slider-base::before {
+  background-color: currentColor;
+  bottom: 8px;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: -51px;
+  top: 8px;
+}
+
+.range-slider-connect {
+  background-color: currentColor;
+  height: 4px;
+  right: 0;
+  top: 8px;
+}
+
+.range-slider-connect,
+.range-slider-origin {
+  position: absolute;
+  transform-origin: 0 0;
+  transform-style: flat;
+  width: 100%;
+  will-change: transform;
+}
+
+.range-slider-origin {
+  left: 100%;
+}
+
+.range-slider-handle {
+  background-color: currentColor;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.range-slider-origin:last-child {
+  left: 216px;
+}
+
+.range-slider-handle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-slider-handle:focus {
+  outline: 3px solid #83b3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-slider-handle:active {
+  outline: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
