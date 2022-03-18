@@ -12,9 +12,7 @@
 .page input {
   box-shadow: none;
   box-sizing: border-box;
-  font: inherit;
   appearance: textfield;
-  font-weight: 700;
 }
 
 .page input::-webkit-outer-spin-button,

@@ -314,7 +314,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
-  padding: 37px 72px 52px;
+  padding: 35px 72px 51px;
 }
 
 .inner-header-title {
@@ -594,7 +594,7 @@ body {
 .housing-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 11px 18px;
+  gap: 12px 18px;
   margin: 0 72px;
   padding: 54px 0 34px;
   border-bottom: 1px solid #e6e6e6;
@@ -832,7 +832,7 @@ body {
 .form-label {
   font-weight: 700;
   order: -2;
-  padding: 5px 10px 0 0;
+  padding: 4px 10px 0 0;
   width: 145px;
 }
 
@@ -841,8 +841,9 @@ body {
   border: 2px solid transparent;
   border-radius: 4px;
   flex-grow: 1;
+  font: inherit;
   font-weight: 700;
-  padding: 2px 20px 4px;
+  padding: 1px 17px 5px;
 }
 
 .form-field-modal:hover {
@@ -872,29 +873,26 @@ body {
   width: calc(100% - 155px);
 }
 
+.form-group-short {
+  width: 50%;
+}
+
+.form-group-short:nth-of-type(2n) .form-label {
+  margin-left: auto;
+  max-width: 100px;
+  width: auto;
+}
+
 .form-button {
   background-color: transparent;
   border-radius: 4px;
   height: 20px;
-  opacity: 0.3;
   position: absolute;
   right: 16px;
   top: 15px;
   width: 20px;
-}
-
-.form-button:focus{
-  opacity: 1;
-}
-
-.form-button-datepicker::before {
-  -webkit-mask-image: url("../images/date.svg");
-          mask-image: url("../images/date.svg");
-}
-
-.form-button-datepicker:focus-visible {
-  outline: none;
-  color: inherit;
+  border: none;
+  opacity: 0.3;
 }
 
 .form-button::before {
@@ -908,8 +906,22 @@ body {
   transition: inherit;
 }
 
-.form-group-short {
-  width: 50%;
+.form-button:hover {
+  opacity: 1;
+}
+
+.form-button:focus-visible {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+}
+
+.form-button:active {
+  opacity: 0.2;
+}
+
+.form-button-datepicker::before {
+  -webkit-mask-image: url("../images/date.svg");
+          mask-image: url("../images/date.svg");
 }
 
 .form-button-step-down::before {
@@ -917,54 +929,13 @@ body {
           mask-image: url("../images/minus.svg");
 }
 
+.form-button-step-down {
+  right: 98px;
+}
+
 .form-button-step-up::before {
   -webkit-mask-image: url("../images/plus.svg");
           mask-image: url("../images/plus.svg");
-}
-
-.form-group-short:nth-of-type(2n) .form-label {
-  margin-left: auto;
-  max-width: 100px;
-  width: auto;
-}
-
-.form-button-step-down {
-  right: 98px;
-  top: 15px;
-  border: none;
-  color: rgba(0, 0, 0, 0.3)
-}
-
-.form-button-step-down:hover {
-  color: #000000;
-}
-
-.form-button-step-down:focus-visible {
-  color: #000000;
-  outline: 3px solid #83b3d3;
-}
-
-.form-button-step-down:active {
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.form-button-step-up {
-  right: 17px;
-  top: 13px;
-  border: none;
-}
-
-.form-button-step-up:hover {
-  color: #000000;
-}
-
-.form-button-step-up:focus-visible {
-  color: #000000;
-  outline: 3px solid #83b3d3;
-}
-
-.form-button-step-up:active {
-  color: rgba(0, 0, 0, 0.2);
 }
 
 .form-tooltip {
@@ -1252,11 +1223,9 @@ body {
 .page input {
   box-shadow: none;
   box-sizing: border-box;
-  font: inherit;
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
-  font-weight: 700;
 }
 
 .page input::-webkit-outer-spin-button,
@@ -1637,7 +1606,7 @@ body {
 }
 
 .signup-subscribe {
-  padding: 16px 22px 19px;
+  padding: 19px 20px 16px;
   border-radius: 10px 0 0 10px;
   border: 2px solid transparent;
   background-color: #f2f2f2;
