@@ -1,0 +1,15 @@
+.main-intro {
+  background-color: rgb(131, 179, 211);
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 0 63px;
+  min-height: 485px;
+  display: block;
+}
+
+.main-intro-logo {
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
+}

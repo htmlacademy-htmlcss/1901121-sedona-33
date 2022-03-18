@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.page button {
+  border: none;
+}
+
+.page input {
+  box-shadow: none;
+  box-sizing: border-box;
+  font: inherit;
+  appearance: textfield;
+  font-weight: 700;
+  /* padding-left: 17px; */
+}
+
+.page input::-webkit-outer-spin-button,
+.page input::-webkit-inner-spin-button {
+  appearance: none;
+}

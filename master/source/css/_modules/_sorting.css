@@ -1,0 +1,16 @@
+.sorting {
+  display: flex;
+  padding: 44px 72px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-sort {
+  display: block;
+  width: 18rem;
+}
+
+.sorting-title {
+  width: 50%;
+  text-align: left;
+}
