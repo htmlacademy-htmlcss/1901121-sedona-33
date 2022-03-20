@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-user-link navigation-fav" href="#!">
+          <a class="navigation-user-link navigation-fav" href="#">
             <span class="navigation-fav-count">
               <span class="visually-hidden">Количество лайков:</span>
               12
@@ -125,17 +125,13 @@
               <div class="range-slider-target">
                 <div class="range-slider-base">
                   <div class="range-slider-connects">
-                    <div class="range-slider-connect" style="transform: translate(0%, 0px) scale(1, 1);">
-                    </div>
+                    <div class="range-slider-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div>
                   </div>
                   <div class="range-slider-origin" style="transform: translate(-100%, 0px); z-index: 5;">
-                    <div class="range-slider-handle r" tabindex="0" aria-label="Меньше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="0.0" aria-valuetext="0.00">
-                      <div class="range-slider-touch-area"></div>
-                    </div>
+                    <button class="range-slider-handle" tabindex="0" aria-label="Меньше."></button>
                   </div>
                   <div class="range-slider-origin" style="transform: translate(0%, 0px); z-index: 4;">
-                    <div class="range-slider-handle range-slider-handle-upper" tabindex="0" aria-label="Больше." role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="11100.0" aria-valuenow="11100.0" aria-valuetext="11100.00">
-                    </div>
+                    <button class="range-slider-handle range-slider-handle-upper" tabindex="0" aria-label="Больше."></button>
                   </div>
                 </div>
               </div>
@@ -149,7 +145,7 @@
       </section>
     </header>
     <div class="sorting">
-      <h2 class="section-title sorting-title">
+      <h2 class="sorting-title">
         Найдено гостиниц: 38
       </h2>
       <label aria-label="Сортировка.">
@@ -162,76 +158,81 @@
       </label>
       <ul class="mode-list">
         <li>
-          <input class="mode-item-kind visually-hidden" id="type-tile" name="mode" type="radio" value="tile" checked="">
-          <label class="mode-item mode-tile" for="type-tile">
+          <a class="mode-item mode-item-current mode-tile" href="#">
             <span class="visually-hidden">Плитка.</span>
-          </label>
+          </a>
         </li>
         <li>
-          <input class="mode-item-kind visually-hidden" id="type-slideshow" name="mode" type="radio" value="slideshow">
-          <label class="mode-item mode-slideshow" for="type-slideshow">
+          <a class="mode-item mode-slideshow" href="#">
             <span class="visually-hidden">Слайдшоу.</span>
-          </label>
+          </a>
         </li>
         <li>
-          <input class="mode-item-kind visually-hidden" id="type-schedule" name="mode" type="radio" value="schedule">
-          <label class="mode-item mode-schedule" for="type-schedule">
+          <a class="mode-item mode-schedule" href="#">
             <span class="visually-hidden">Список.</span>
-          </label>
+          </a>
         </li>
       </ul>
     </div>
     <ul class="housing-list">
       <li class="housing-card">
-        <img class="housing-card-image" src="images/hotel-amara.jpg" width="299" height="206" alt="Фото объекта.">
-        <h3 class="housing-card-title">Amara Resort &amp; Spa</h3>
-        <p class="housing-card-type">Гостиница</p>
-        <p class="housing-card-price">От 4000 ₽</p>
-        <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button housing-favor" href="#">В избранное</a>
+        <a class="housing-card-link" href="#">
+          <img class="housing-card-image" src="images/hotel-amara.jpg" width="299" height="206" alt="Фото объекта.">
+          <h3 class="housing-card-title">Amara Resort &amp; Spa</h3>
+        </a>
+        <p class="housing-card-text">Гостиница</p>
+        <p class="housing-card-text">От 4000 ₽</p>
+        <a class="button" href="#">Подробнее</a>
+        <a class="button housing-favor" href="#">В избранное</a>
         <p class="housing-stars housing-stars-4">
           <span class="visually-hidden">4 звезды.</span>
         </p>
         <p class="housing-rating">Рейтинг: 8,5</p>
       </li>
       <li class="housing-card">
-        <img class="housing-card-image" src="images/hotel-desert.jpg" width="299" height="206" alt="Фото объекта.">
-        <h3 class="housing-card-title">Desert Quail Inn</h3>
-        <p class="housing-card-type">Гостиница</p>
-        <p class="housing-card-price">От 3000 ₽</p>
-        <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button housing-favor" href="#">В избранное</a>
+        <a class="housing-card-link" href="#">
+          <img class="housing-card-image" src="images/hotel-desert.jpg" width="299" height="206" alt="Фото объекта.">
+          <h3 class="housing-card-title">Desert Quail Inn</h3>
+        </a>
+        <p class="housing-card-text">Гостиница</p>
+        <p class="housing-card-text">От 3000 ₽</p>
+        <a class="button" href="#">Подробнее</a>
+        <a class="button housing-favor" href="#">В избранное</a>
         <p class="housing-stars housing-stars-3">
           <span class="visually-hidden">3 звезды.</span>
         </p>
         <p class="housing-rating">Рейтинг: 8,9</p>
       </li>
       <li class="housing-card">
-        <img class="housing-card-image" src="images/hotel-diablo.jpg" width="299" height="206" alt="Фото объекта.">
-        <h3 class="housing-card-title">Villas at Poco Diablo</h3>
-        <p class="housing-card-type">Гостиница</p>
-        <p class="housing-card-price">От 2000 ₽</p>
-        <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button button housing-favor housing-favor-active" href="#">В избранном</a>
+        <a class="housing-card-link" href="#">
+          <img class="housing-card-image" src="images/hotel-diablo.jpg" width="299" height="206" alt="Фото объекта.">
+          <h3 class="housing-card-title">Villas at Poco Diablo</h3>
+        </a>
+        <p class="housing-card-text">Гостиница</p>
+        <p class="housing-card-text">От 2000 ₽</p>
+        <a class="button" href="#">Подробнее</a>
+        <a class="button housing-favor-active" href="#">В избранном</a>
         <p class="housing-stars housing-stars-2">
           <span class="visually-hidden">2 звезды.</span>
         </p>
         <p class="housing-rating">Рейтинг: 9,2</p>
       </li>
       <li class="housing-card">
-        <img class="housing-card-image" src="images/hotel-greentree.jpg" width="299" height="206" alt="Фото объекта.">
-        <h3 class="housing-card-title">GreenTree Inn</h3>
-        <p class="housing-card-type">Гостиница</p>
-        <p class="housing-card-price">От 3000 ₽</p>
-        <a class="housing-card-button button" href="#">Подробнее</a>
-        <a class="housing-card-button housing-favor" href="#">В избранное</a>
+        <a class="housing-card-link" href="#">
+          <img class="housing-card-image" src="images/hotel-greentree.jpg" width="299" height="206" alt="Фото объекта.">
+          <h3 class="housing-card-title">GreenTree Inn</h3>
+        </a>
+        <p class="housing-card-text">Гостиница</p>
+        <p class="housing-card-text">От 3000 ₽</p>
+        <a class="button" href="#">Подробнее</a>
+        <a class="button housing-favor" href="#">В избранное</a>
         <p class="housing-stars housing-stars-2">
           <span class="visually-hidden">2 звезды.</span>
         </p>
         <p class="housing-rating">Рейтинг: 9,2</p>
       </li>
     </ul>
-    <a class="housing button button-load" href="#">Загрузить ещё</a>
+    <a class="button button-load" href="#">Загрузить ещё</a>
     <div class="pagination">
       <ul class="pagination-list">
         <li class="pagination-item">
@@ -253,16 +254,14 @@
           <a class="pagination-link" href="#">10</a>
         </li>
       </ul>
-      <form class="count-pages" action="https://echo.htmlacademy.ru" method="get">
-        <label class="result-limit">
-          <span class="result-page-title">Гостиниц на странице:</span>
-          <span class="result-limit-list select">
-            <select class="select-control" name="housing-count">
-              <option selected="">4</option>
-            </select>
-          </span>
-        </label>
-      </form>
+      <label class="result-limit">
+        Гостиниц на странице:
+        <span class="result-limit-select select">
+          <select class="select-control" name="housing-count">
+            <option selected="">4</option>
+          </select>
+        </span>
+      </label>
     </div>
     <div class="subscribe ">
       <h2 class="section-title">
