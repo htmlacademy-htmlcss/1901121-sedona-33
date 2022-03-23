@@ -187,6 +187,7 @@ body {
   box-sizing: border-box;
   text-decoration: none;
   cursor: pointer;
+  outline-offset: 0;
 }
 
 .button:hover {
@@ -571,6 +572,7 @@ body {
   grid-column: 1 / -1;
   color: inherit;
   text-decoration: none;
+  outline: none;
 }
 
 .housing-card-image {
@@ -1227,6 +1229,7 @@ body {
   line-height: 26px;
   font-weight: 700;
   border-radius: 4px;
+  outline-offset: 0;
 }
 
 .pagination-link:hover:not(.pagination-active) {
