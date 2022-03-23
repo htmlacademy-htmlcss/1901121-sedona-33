@@ -1550,11 +1550,13 @@ body {
 }
 
 .signup-subscribe:not(:-moz-placeholder-shown):invalid {
+  background-color: #ffffff;
   border-color: #ff5757;
 }
 
 .signup-subscribe:not(:placeholder-shown):invalid,
 .subscribe-form-validable .signup-subscribe:invalid {
+  background-color: #ffffff;
   border-color: #ff5757;
 }
 
