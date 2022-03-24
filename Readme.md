@@ -3,12 +3,12 @@
 * Студент: [Алексей Самонов](https://up.htmlacademy.ru/htmlcss/33/user/1901121).
 * Наставник: [Андрей Ефимов](https://up.htmlacademy.ru/javascript/25/user/367335).
 
----
+<!--
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
 
----
+-->
 
 ### Памятка
 
